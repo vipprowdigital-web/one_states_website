@@ -122,18 +122,18 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     ],
 
     mediaLibraryNav: [
-      {
-        title: "Certificate",
-        url: "/admin/certificate",
-        icon: Table2,
-        isActive: isActive("/admin/certificate"),
-      },
-      {
-        title: "Users Certificate",
-        url: "/admin/user-certificate",
-        icon: FileBadge,
-        isActive: isActive("/admin/user-certificate"),
-      },
+      // {
+      //   title: "Certificate",
+      //   url: "/admin/certificate",
+      //   icon: Table2,
+      //   isActive: isActive("/admin/certificate"),
+      // },
+      // {
+      //   title: "Users Certificate",
+      //   url: "/admin/user-certificate",
+      //   icon: FileBadge,
+      //   isActive: isActive("/admin/user-certificate"),
+      // },
       {
         title: "Gallery",
         url: "/admin/gallery",
@@ -186,22 +186,22 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         ],
       },
 
-      {
-        title: "Course",
-        url: "/admin/course",
-        icon: BookCopy,
-        isActive: isActive("/admin/course"),
-        items: [
-          { title: "All Course", url: "/admin/course?filter=all" },
-          { title: "Active Course", url: "/admin/course?filter=active" },
-          { title: "Inactive Course", url: "/admin/course?filter=inactive" },
-          { title: "Featured Course", url: "/admin/course?filter=featured" },
-          {
-            title: "Non-Featured Course",
-            url: "/admin/course?filter=nonfeatured",
-          },
-        ],
-      },
+      // {
+      //   title: "Course",
+      //   url: "/admin/course",
+      //   icon: BookCopy,
+      //   isActive: isActive("/admin/course"),
+      //   items: [
+      //     { title: "All Course", url: "/admin/course?filter=all" },
+      //     { title: "Active Course", url: "/admin/course?filter=active" },
+      //     { title: "Inactive Course", url: "/admin/course?filter=inactive" },
+      //     { title: "Featured Course", url: "/admin/course?filter=featured" },
+      //     {
+      //       title: "Non-Featured Course",
+      //       url: "/admin/course?filter=nonfeatured",
+      //     },
+      //   ],
+      // },
       {
         title: "Categories",
         url: "/admin/category",
@@ -269,16 +269,16 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           items={data.legalComplianceNav}
           groupName="Legal & Compliance"
         />
-        <NavMain
+        {/* <NavMain
           items={data.careerManagementNav}
           groupName="Career Management"
-        />
+        /> */}
 
-        <NavMain items={data.clientShowcaseNav} groupName="Client Showcase" />
+        {/* <NavMain items={data.clientShowcaseNav} groupName="Client Showcase" /> */}
 
         <NavMain items={data.appSettingsNav} groupName="Application Settings" />
 
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        {/* <NavSecondary items={data.navSecondary} className="mt-auto" /> */}
       </SidebarContent>
 
       {/* Footer */}

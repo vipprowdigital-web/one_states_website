@@ -46,9 +46,9 @@ const routePrefix = "/api/v1";
 const allowedOrigins = [
   process.env.NEXT_FRONTEND_URL, // Next.js production site
   process.env.ADMIN_FRONTEND_URL, // Admin production site
-  process.env.REACT_NATIVE_FRONTEND_URL, // React Native local
-  process.env.VIPPROW_LANDING_PAGE_URL,
-  "http://192.168.29.175:3000",
+  // process.env.REACT_NATIVE_FRONTEND_URL, // React Native local
+  // process.env.VIPPROW_LANDING_PAGE_URL,
+  // "http://192.168.29.175:3000",
   "http://localhost:3000",
   "http://localhost:5173",
   "http://localhost:5174",
