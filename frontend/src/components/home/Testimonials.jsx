@@ -127,7 +127,7 @@ export default function Testimonials() {
               isSlider ? "min-h-80" : ""
             }`}
           >
-            <AnimatePresence mode="wait">
+            <AnimatePresence>
               {visibleTestimonials.map((t, index) => (
                 <motion.div
                   key={`${t.name}-${currentPage}`}

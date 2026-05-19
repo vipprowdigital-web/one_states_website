@@ -13,26 +13,31 @@ const SERVICES = [
     num: "01",
     title: "Hotel Brand Tie-Ups",
     desc: "Helping hotel owners and developers partner with leading hospitality brands through - Management Contract, MG / Revenue Sharing, Franchise Model and Pure Lease Model.",
+    link: "/services/hotel-brand-tie-ups",
   },
   {
     num: "02",
     title: "Commercial Retail Leasing",
     desc: "Strategic leasing solutions for - Retail Brands, NBFCs, Commercial Developers, High-Street & Retail Spaces",
+    link: "/services/commercial-retail-leasing",
   },
   {
     num: "03",
     title: "Warehouse Solutions",
     desc: "Warehouse and industrial space solutions for, 3PL Logistics Players, FMCG Companies, Distribution & Supply Chain Businesses.",
+    link: "/services/warehouse-leasing",
   },
   {
     num: "04",
     title: "Large Asset Transaction Advisory",
     desc: "Advisory and transaction support for - Hotels & Resorts, Commercial Assets, Land Parcels and Investment Opportunities.",
+    link: "/services/large-asset-transaction-advisory",
   },
   {
     num: "05",
     title: "JV & Strategic Collaborations",
     desc: "Partnership and collaboration consulting for - Housing Projects, Hotels & Resorts, Warehousing Projects and Mixed-Use Developments.",
+    link: "/services/jv-collaboration",
   },
 ];
 
@@ -123,7 +128,7 @@ export default function WhatWeDo() {
                               {svc.desc}
                             </motion.p>
                             <Link
-                              href="/services/"
+                              href={svc.link}
                               className="text-secondary font-bold flex flex-row items-center gap-2 mt-3"
                             >
                               {" "}

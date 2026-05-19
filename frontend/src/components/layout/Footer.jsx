@@ -13,11 +13,17 @@ const quickLinks = [
 ];
 
 const services = [
-  { name: "Hotel Brand Tie-Ups", href: "/services" },
-  { name: "Commercial Retail Leasing", href: "/services" },
-  { name: "Warehouse Solutions", href: "/services" },
-  { name: "Large Asset Transaction Advisory", href: "/services" },
-  { name: "JV & Strategic Collaborations", href: "/services" },
+  { name: "Hotel Brand Tie-Ups", href: "/services/hotel-brand-tie-ups" },
+  {
+    name: "Commercial Retail Leasing",
+    href: "/services/commercial-retail-leasing",
+  },
+  { name: "Warehouse Solutions", href: "/services/warehouse-leasing" },
+  {
+    name: "Large Asset Transaction Advisory",
+    href: "/services/large-asset-transaction-advisory",
+  },
+  { name: "JV & Strategic Collaborations", href: "/services/jv-collaboration" },
 ];
 const industries = [
   "Healthcare",
