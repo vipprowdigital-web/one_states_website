@@ -28,9 +28,35 @@ const TESTIMONIALS = [
   },
 ];
 
+const baseUrl = "http://localhost:5000/api/v1";
+
 export default function Testimonials() {
   const [currentPage, setCurrentPage] = useState(0);
   const [cardsPerPage, setCardsPerPage] = useState(3);
+  const [testimonials, setTestimonials] = useState([]);
+
+  useEffect(() => {
+    const fetchTestimonials = async () => {
+      try {
+        const response = await fetch(`${baseUrl}/testimonial/public`, {
+          method: "GET",
+          headers: { "Content-Type": "application/json" },
+        });
+        // console.log("Response: ", response);
+
+        if (response.ok) {
+          const data = await response.json();
+          // console.log("Response DATA: ", data.data);
+          setTestimonials(data.data);
+        } else {
+          console.error("Couldn't fetch testimonies.");
+        }
+      } catch {
+        console.error("Error while fetching testimonials.");
+      }
+    };
+    fetchTestimonials();
+  }, []);
 
   // Responsive cards count
   useEffect(() => {
@@ -51,16 +77,16 @@ export default function Testimonials() {
     return () => window.removeEventListener("resize", updateCardsPerPage);
   }, []);
 
-  const totalPages = Math.ceil(TESTIMONIALS.length / cardsPerPage);
+  const totalPages = Math.ceil(testimonials.length / cardsPerPage);
 
-  const isSlider = TESTIMONIALS.length > cardsPerPage;
+  const isSlider = testimonials.length > cardsPerPage;
 
   const visibleTestimonials = isSlider
-    ? TESTIMONIALS.slice(
+    ? testimonials.slice(
         currentPage * cardsPerPage,
         currentPage * cardsPerPage + cardsPerPage,
       )
-    : TESTIMONIALS;
+    : testimonials;
 
   const nextPage = () => {
     setCurrentPage((prev) => (prev + 1) % totalPages);
@@ -69,6 +95,8 @@ export default function Testimonials() {
   const prevPage = () => {
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
   };
+
+  if (testimonials.length === 0) return null;
 
   return (
     <section className="relative bg-white pt-10 md:py-28 overflow-hidden z-10">
@@ -147,33 +175,40 @@ export default function Testimonials() {
                   </div>
 
                   {/* Stars */}
-                  {/* <div className="flex items-center gap-1 mb-7">
-                    {[...Array(t.rating)].map((_, i) => (
-                      <Star
-                        key={i}
-                        size={16}
-                        className="text-secondary fill-secondary"
-                      />
-                    ))}
-                  </div> */}
+                  {t.rating && (
+                    <div className="flex items-center gap-1 mb-7">
+                      {[...Array(t.rating)].map((_, i) => (
+                        <Star
+                          key={i}
+                          size={16}
+                          className="text-secondary fill-secondary"
+                        />
+                      ))}
+                    </div>
+                  )}
 
                   {/* Content */}
-                  <p className="text-primary/70 font-semibold text-base leading-relaxed mb-6 relative z-10 flex-1">
-                    &quot;{t.content}&quot;
-                  </p>
+                  <p
+                    className="text-primary/70 font-semibold text-base leading-relaxed mb-6 relative z-10 flex-1"
+                    dangerouslySetInnerHTML={{ __html: t.description }}
+                  />
 
                   {/* Divider */}
                   <div className="w-full h-px bg-primary/10 mb-5 group-hover:bg-secondary/20 transition-colors duration-300" />
 
                   {/* Meta */}
                   <div className="flex flex-col">
-                    <span className="text-primary font-bold text-lg tracking-tight group-hover:text-secondary transition-colors duration-300">
-                      {t.name}
-                    </span>
+                    {t.name && (
+                      <span className="text-primary font-bold text-lg tracking-tight group-hover:text-secondary transition-colors duration-300">
+                        {t.name}
+                      </span>
+                    )}
 
-                    <span className="text-secondary text-xs font-medium tracking-wide opacity-80 mt-1">
-                      {t.role}
-                    </span>
+                    {t.designation && (
+                      <span className="text-secondary text-xs font-medium tracking-wide opacity-80 mt-1">
+                        {t.designation}
+                      </span>
+                    )}
                   </div>
                 </motion.div>
               ))}

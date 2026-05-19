@@ -179,16 +179,6 @@ export default function ContactPage() {
     },
 
     {
-      accessorKey: "city",
-      header: "City",
-      cell: ({ row }) => row.original.city || "-",
-    },
-    {
-      accessorKey: "state",
-      header: "State",
-      cell: ({ row }) => row.original.state || "-",
-    },
-    {
       accessorKey: "services",
       header: "Services",
       cell: ({ row }) => {

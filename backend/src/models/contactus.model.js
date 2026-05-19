@@ -41,21 +41,6 @@ const contactUsSchema = new Schema(
       match: [/^[0-9]{10,15}$/, "Invalid phone number format"],
     },
 
-    // FOR LANDING PAGE
-    businessName: {
-      type: String,
-      trim: true,
-    },
-    city: {
-      type: String,
-      trim: true,
-    },
-    state: {
-      type: String,
-      trim: true,
-    },
-    // FOR LANDING PAGE
-
     services: [
       {
         type: mongoose.Schema.Types.ObjectId,

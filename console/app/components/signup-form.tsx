@@ -79,7 +79,7 @@ export function SignupForm({
             text: error?.message || "Registration failed. Please try again.",
           });
         },
-      }
+      },
     );
   };
 
@@ -168,11 +168,14 @@ export function SignupForm({
                 </Button>
               </Field>
               <FieldDescription className="text-center">
-                Already have an account? <Link to="/sign-in">Sign In</Link>
+                Already have an account?{" "}
+                <Link to="/sign-in" className="hover:text-secondary">
+                  Sign In
+                </Link>
               </FieldDescription>
             </FieldGroup>
           </form>
-          <div className="relative hidden md:block bg-[#1E4EC8] dark:bg-[#1E4EC8]">
+          <div className="relative hidden md:block bg-secondary dark:bg-secondary">
             <img
               src={belleza_logo}
               alt="Image"

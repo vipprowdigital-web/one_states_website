@@ -1,14 +1,14 @@
 import { Button } from "~/components/ui/button";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
-import belleza_favicon  from "@/welcome/belleza_favicon.svg";
+import belleza_favicon from "@/welcome/belleza_favicon.svg";
 import belleza_logo from "@/welcome/belleza_logo.svg";
 import { useNavigate } from "react-router";
 
 export function Welcome() {
   const navigate = useNavigate();
   return (
-    <main className="flex items-center justify-center pt-16 pb-4 bg-[#1E4EC8] dark:bg-[#1E4EC8]">
+    <main className="flex items-center justify-center pt-16 pb-4 bg-primary">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
         <header className="flex flex-col items-center gap-9">
           <div className="w-[500px] max-w-[100vw] p-4">
@@ -31,7 +31,7 @@ export function Welcome() {
             </p>
 
             <div className="flex min-h-svh flex-col items-center justify-center">
-              <Button onClick={()=> navigate('/sign-in')}>Click me</Button>
+              <Button onClick={() => navigate("/sign-in")}>Click me</Button>
             </div>
 
             <ul>

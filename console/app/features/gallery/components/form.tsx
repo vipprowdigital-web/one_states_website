@@ -54,8 +54,10 @@ export default function GalleryForm({
   // const { data: categoryData, isLoading: categoryLoading } =
   //   useGetCategoriesQuery({ page: 1, limit: 100 });
   const GALLERY_CATEGORY_OPTIONS = [
-    { label: "Student Work", value: "student-work" },
     { label: "Gallery", value: "gallery" },
+    // { label: "Home About Section", value: "home-about-section" },
+    // { label: "Why Us Section", value: "why-us-section" },
+    // { label: "Final CTA Section", value: "final-cta-section" },
   ];
 
   const [createGallery] = useCreateGalleryMutation();

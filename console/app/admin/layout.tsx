@@ -61,9 +61,9 @@ export default function AdminLayout({
             </Breadcrumb>
           </div>
 
-          <div className="px-4">
+          {/* <div className="px-4">
             <ThemeSwitcher />
-          </div>
+          </div> */}
         </header>
         <main className="flex flex-1 flex-col gap-4 p-4">
           <Outlet />

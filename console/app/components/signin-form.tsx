@@ -128,11 +128,11 @@ export function SignInForm({
               </Field>
               <FieldDescription className="text-center">
                 Don't have an account? Contact with Admin.
-                <Link to="/sign-up">Sign Up</Link>
+                <Link to="/sign-up"> Sign Up</Link>
               </FieldDescription>
             </FieldGroup>
           </form>
-          <div className="relative hidden md:block bg-[#1E4EC8] dark:bg-[#1E4EC8]">
+          <div className="relative hidden md:block bg-secondary dark:bg-secondary">
             <img
               src={vipprow_logo}
               alt="Image"

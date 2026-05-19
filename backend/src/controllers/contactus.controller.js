@@ -6,19 +6,9 @@ import mongoose from "mongoose";
 ============================================================ */
 export const createContactUs = async (req, res) => {
   try {
-    const {
-      type,
-      name,
-      email,
-      phone,
-      subject,
-      message,
-      meta,
-      services,
-      businessName,
-      city,
-      state,
-    } = req.body;
+    const { type, name, email, phone, subject, message, meta, services } =
+      req.body;
+    console.log("Req.body: ", req.body);
 
     // Validate required fields
     if (!type) {
@@ -41,6 +31,8 @@ export const createContactUs = async (req, res) => {
       );
 
       if (isInvalid) {
+        console.log("Invalid service id..");
+
         return res.status(400).json({
           status: "error",
           message: "Invalid Service ID detected.",
@@ -57,9 +49,6 @@ export const createContactUs = async (req, res) => {
       email,
       phone: phone || null,
       subject: subject || null,
-      businessName: businessName,
-      city: city,
-      state: state,
       message,
       meta: meta || {},
       services: services || null, // 👈 ADD THIS

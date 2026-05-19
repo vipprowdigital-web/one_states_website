@@ -16,8 +16,27 @@ import { MessageSquare, PhoneCall, ArrowRight } from "lucide-react";
 import { GridPattern } from "@/components/common/Patterns";
 import BlogSection from "@/components/home/BlogSection";
 import Image from "next/image";
+import { useEffect } from "react";
+import Loader from "@/components/common/Loader";
+import { useAppConfigStore } from "@/store/useAppConfigStore";
 
-export default function page() {
+export default function Home() {
+  const config = useAppConfigStore((state) => state.config);
+  const isLoading = useAppConfigStore((state) => state.isLoading);
+  const setLoading = useAppConfigStore((state) => state.setLoading);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, [setLoading]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <div className="bg-white">
       <Hero />
@@ -32,12 +51,12 @@ export default function page() {
       <BlogSection />
       <Testimonials />
       <FAQs />
-      <FinalCTA />
+      <FinalCTA config={config} />
     </div>
   );
 }
 
-function FinalCTA() {
+function FinalCTA({ config }) {
   return (
     <section className="relative bg-primary py-20 md:py-28 overflow-hidden z-10 text-white border-t border-white/5">
       <GridPattern opacity={0.03} />
@@ -70,7 +89,7 @@ function FinalCTA() {
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               {/* Primary Call to Action: Connect With Us */}
               <a
-                href="/contact"
+                href={`tel:${config?.phoneNumber}`}
                 className="inline-flex items-center justify-center gap-3 bg-secondary text-white px-8 py-4 rounded-xl font-bold tracking-wide shadow-xl shadow-secondary/10 hover:bg-white hover:text-primary hover:shadow-none transition-all duration-300 group"
               >
                 <PhoneCall size={18} strokeWidth={2.5} />
@@ -78,7 +97,7 @@ function FinalCTA() {
               </a>
 
               <a
-                href="mailto:onestates.com"
+                href={`mailto:${config?.email}`}
                 className="inline-flex items-center justify-center gap-3 bg-white/5 text-white border border-white/10 px-8 py-4 rounded-xl font-bold tracking-wide hover:bg-white/10 hover:border-white/20 transition-all duration-300 group"
               >
                 <MessageSquare

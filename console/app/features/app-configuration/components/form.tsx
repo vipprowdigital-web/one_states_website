@@ -121,12 +121,12 @@ export default function AppConfigurationForm({
   const handleAddressChange = (
     index: number,
     field: keyof CompanyAddress,
-    value: string
+    value: string,
   ) => {
     setValues((prev) => ({
       ...prev,
       companyAddress: prev.companyAddress.map((addr, i) =>
-        i === index ? { ...addr, [field]: value } : addr
+        i === index ? { ...addr, [field]: value } : addr,
       ),
     }));
   };
@@ -202,7 +202,7 @@ export default function AppConfigurationForm({
       {/* Form */}
       <form onSubmit={handleSubmit} className="space-y-10">
         {/* BASIC INFO */}
-        <Card className="backdrop-blur-lg bg-white/80 dark:bg-gray-900/60 border border-border shadow-sm hover:shadow-lg transition-all duration-300">
+        <Card className="backdrop-blur-lg bg-primary border border-border shadow-sm hover:shadow-lg transition-all duration-300">
           <CardHeader>
             <CardTitle className="text-base sm:text-lg font-semibold">
               Basic Information
@@ -239,7 +239,7 @@ export default function AppConfigurationForm({
                   onChange={(e) =>
                     handleChange(
                       field.key as keyof AppConfigValues,
-                      e.target.value
+                      e.target.value,
                     )
                   }
                   placeholder={field.placeholder}
@@ -296,7 +296,7 @@ export default function AppConfigurationForm({
                         handleAddressChange(
                           index,
                           "googleMapLocation",
-                          e.target.value
+                          e.target.value,
                         )
                       }
                       placeholder="https://maps.google.com/..."
