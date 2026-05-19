@@ -20,12 +20,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${raleway.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans bg-secondary">
-        <AppConfigInitializer>
-          <Navbar />
-          {children}
-          <ContactForm />
-          <Footer />
-        </AppConfigInitializer>
+        {/* <AppConfigInitializer> */}
+        <Navbar />
+        {children}
+        <ContactForm />
+        <Footer />
+        {/* </AppConfigInitializer> */}
       </body>
     </html>
   );
