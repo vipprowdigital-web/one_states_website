@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Award, ShieldCheck, Zap } from "lucide-react";
 import { GridPattern } from "../common/Patterns";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutSection() {
   return (
@@ -25,9 +26,6 @@ export default function AboutSection() {
               transition={{ type: "spring", stiffness: 60, damping: 15 }}
               className="relative rounded-3xl overflow-hidden shadow-2xl border border-primary/10 aspect-4/5 bg-primary/5"
             >
-              {/* Main Section Image
-                  Replace the src path below with your actual local asset image 
-                  (e.g., public/images/hospitality-growth.jpg) */}
               <Image
                 src="/images/modern-skyscaper.jpg"
                 width={800}
@@ -35,15 +33,6 @@ export default function AboutSection() {
                 alt="Luxury Hotel Lobby Architecture representing Premium Hospitality Growth"
                 className="w-full h-full object-cover grayscale-20 contrast-110 group-hover:scale-105 transition-transform duration-700"
               />
-
-              {/* <div className="absolute bottom-6 right-6 bg-primary text-white p-6 rounded-2xl border border-white/10 max-w-50 shadow-xl backdrop-blur-md">
-                <p className="text-secondary font-black text-3xl mb-1 tracking-tight">
-                  FMCG
-                </p>
-                <p className="text-xs text-white/70 uppercase font-black tracking-widest leading-tight">
-                  Corporate DNA Leadership
-                </p>
-              </div> */}
             </motion.div>
           </div>
 
@@ -88,7 +77,6 @@ export default function AboutSection() {
               growth.
             </motion.p>
 
-            {/* Paragraph 2: Corporate Track Record Profile */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -102,7 +90,6 @@ export default function AboutSection() {
               and market strategy.
             </motion.p>
 
-            {/* Paragraph 3: Strategic Corporate Philosophy Focus */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -115,14 +102,13 @@ export default function AboutSection() {
               trust, execution and long-term vision.
             </motion.p>
 
-            {/* ─── CALL TO ACTION BUTTON ─── */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
             >
-              <a
+              <Link
                 href="/about"
                 className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-xl font-bold tracking-wide transition-all duration-300 group hover:bg-secondary hover:shadow-xl hover:shadow-secondary/20 w-full sm:w-auto justify-center"
               >
@@ -132,7 +118,7 @@ export default function AboutSection() {
                   strokeWidth={2.5}
                   className="text-white transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"
                 />
-              </a>
+              </Link>
             </motion.div>
           </div>
         </div>

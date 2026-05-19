@@ -114,6 +114,7 @@ export default function Hero() {
               whileHover={{ scale: 1.04, backgroundColor: "#d4631e" }}
               whileTap={{ scale: 0.97 }}
               className="bg-secondary text-white px-8 py-4 font-black text-sm tracking-widest uppercase flex items-center gap-3"
+              onClick={() => scrollTo("services")}
             >
               Explore Services
               <svg
@@ -170,7 +171,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-linear-to-t from-[#232627]/60 via-transparent to-transparent" />
 
             {/* Bottom badge */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.1, duration: 0.6 }}
@@ -180,7 +181,7 @@ export default function Hero() {
               <span className="text-white text-xs font-bold tracking-widest uppercase">
                 12 New Listings Today
               </span>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           {/* Floating card */}

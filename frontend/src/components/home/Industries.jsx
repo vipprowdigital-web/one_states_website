@@ -64,9 +64,9 @@ export default function Industries() {
       <GridPattern opacity={0.04} />
 
       {/* Large background text */}
-      <div className="absolute top-0 right-0 text-white/2 font-black text-[200px] leading-none select-none pointer-events-none">
+      {/* <div className="absolute top-0 right-0 text-white/2 font-black text-[200px] leading-none select-none pointer-events-none">
         SECTORS
-      </div>
+      </div> */}
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <SectionReveal>

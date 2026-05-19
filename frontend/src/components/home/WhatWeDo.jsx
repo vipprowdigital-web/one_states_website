@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { fadeIn, fadeUp, slideLeft } from "../common/variants";
 import { SectionReveal } from "../common/SectionReveal";
+import Link from "next/link";
 
 const SERVICES = [
   {
@@ -38,7 +39,7 @@ export default function WhatWeDo() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative bg-white py-28 overflow-hidden">
+    <section className="relative bg-white py-28 overflow-hidden" id="services">
       <DiagPattern />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -110,18 +111,25 @@ export default function WhatWeDo() {
                       </h3>
                       <AnimatePresence>
                         {active === i && (
-                          <motion.p
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.35 }}
-                            className="text-primary/60 text-sm leading-relaxed overflow-hidden"
-                          >
-                            {svc.desc}
-                          </motion.p>
+                          <>
+                            <motion.p
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.35 }}
+                              className="text-primary/60 font-semibold text-sm leading-relaxed overflow-hidden"
+                            >
+                              {svc.desc}
+                            </motion.p>
+                            <Link href="" className="text-secondary font-bold">
+                              {" "}
+                              Know More{" "}
+                            </Link>
+                          </>
                         )}
                       </AnimatePresence>
                     </div>
+
                     <motion.div
                       animate={{ rotate: active === i ? 45 : 0 }}
                       transition={{ duration: 0.3 }}

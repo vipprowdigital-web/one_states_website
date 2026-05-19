@@ -5,72 +5,96 @@ import { GridPattern } from "./Patterns";
 import { SectionReveal } from "./SectionReveal";
 import { useState } from "react";
 import { fadeIn, fadeUp, slideLeft } from "./variants";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const CONTACT_INFO = [
   {
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        className="w-5 h-5"
-      >
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-        <circle cx="12" cy="10" r="3" />
-      </svg>
-    ),
+    icon: <MapPin className="w-4 h-4" strokeWidth={1.8} />,
     label: "Head Office",
     value: "14, Prestige Tower, MG Road,\nBengaluru — 560001",
   },
   {
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        className="w-5 h-5"
-      >
-        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.13 1.17 2 2 0 012.11 0h3a2 2 0 012 1.72c.13 1.01.36 2 .7 2.95a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.13-1.27a2 2 0 012.11-.45c.95.34 1.94.57 2.95.7A2 2 0 0122 16.92z" />
-      </svg>
-    ),
+    icon: <Phone className="w-4 h-4" strokeWidth={1.8} />,
     label: "Phone",
     value: "+91 98765 43210",
   },
   {
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        className="w-5 h-5"
-      >
-        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-        <polyline points="22,6 12,13 2,6" />
-      </svg>
-    ),
+    icon: <Mail className="w-4 h-4" strokeWidth={1.8} />,
     label: "Email",
     value: "hello@skbuilders.in",
   },
   {
-    icon: (
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        className="w-5 h-5"
-      >
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="12 6 12 12 16 14" />
-      </svg>
-    ),
+    icon: <Clock className="w-4 h-4" strokeWidth={1.8} />,
     label: "Working Hours",
     value: "Mon – Sat: 9:00 AM – 7:00 PM\nSunday: By Appointment",
   },
 ];
+
+// const CONTACT_INFO = [
+//   {
+//     icon: (
+//       <svg
+//         viewBox="0 0 24 24"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1.8"
+//         className="w-5 h-5"
+//       >
+//         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+//         <circle cx="12" cy="10" r="3" />
+//       </svg>
+//     ),
+//     label: "Head Office",
+//     value: "14, Prestige Tower, MG Road,\nBengaluru — 560001",
+//   },
+//   {
+//     icon: (
+//       <svg
+//         viewBox="0 0 24 24"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1.8"
+//         className="w-5 h-5"
+//       >
+//         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.13 1.17 2 2 0 012.11 0h3a2 2 0 012 1.72c.13 1.01.36 2 .7 2.95a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.13-1.27a2 2 0 012.11-.45c.95.34 1.94.57 2.95.7A2 2 0 0122 16.92z" />
+//       </svg>
+//     ),
+//     label: "Phone",
+//     value: "+91 98765 43210",
+//   },
+//   {
+//     icon: (
+//       <svg
+//         viewBox="0 0 24 24"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1.8"
+//         className="w-5 h-5"
+//       >
+//         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+//         <polyline points="22,6 12,13 2,6" />
+//       </svg>
+//     ),
+//     label: "Email",
+//     value: "hello@skbuilders.in",
+//   },
+//   {
+//     icon: (
+//       <svg
+//         viewBox="0 0 24 24"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth="1.8"
+//         className="w-5 h-5"
+//       >
+//         <circle cx="12" cy="12" r="10" />
+//         <polyline points="12 6 12 12 16 14" />
+//       </svg>
+//     ),
+//     label: "Working Hours",
+//     value: "Mon – Sat: 9:00 AM – 7:00 PM\nSunday: By Appointment",
+//   },
+// ];
 
 const INTERESTS = [
   "Residential Buy",
@@ -135,14 +159,71 @@ function FloatingInput({
         {label}
       </label>
       {/* animated underline */}
-      <motion.div
+      {/* <motion.div
         className="absolute bottom-0 left-0 h-0.5 bg-secondary"
         animate={{ width: focused ? "100%" : "0%" }}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-      />
+      /> */}
+      {/* animated underline */}
+      {!textarea && (
+        <motion.div
+          className="absolute bottom-0 left-0 h-0.5 bg-secondary"
+          animate={{ width: focused ? "100%" : "0%" }}
+          transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+        />
+      )}
     </div>
   );
 }
+
+const socials = [
+  {
+    name: "Instagram",
+    link: "",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        className="w-5 h-5"
+      >
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+        <circle cx="17.5" cy="6.5" r="1.5" />
+      </svg>
+    ),
+  },
+  {
+    name: "Facebook",
+    link: "",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="w-5 h-5"
+      >
+        <path d="M22 12a10 10 0 10-11.5 9.95v-7.05H8v-2.9h2.5V9.5c0-2.46 1.47-3.82 3.72-3.82 1.08 0 2.21.19 2.21.19v2.43h-1.25c-1.23 0-1.61.76-1.61 1.54v1.85H16l-.4 2.9h-2.2v7.05A10 10 0 0022 12z" />
+      </svg>
+    ),
+  },
+  {
+    name: "Youtube",
+    link: "",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        className="w-5 h-5"
+      >
+        <path d="M23.5 6.2a2.9 2.9 0 00-2-2C19.5 4 12 4 12 4s-7.5 0-9.5.2a2.9 2.9 0 00-2 2C0 8.2 0 12 0 12s0 3.8.5 5.8a2.9 2.9 0 002 2C4.5 20 12 20 12 20s7.5 0 9.5-.2a2.9 2.9 0 002-2c.5-2 .5-5.8.5-5.8s0-3.8-.5-5.8zM9.75 15.02V8.98L15.5 12l-5.75 3.02z" />
+      </svg>
+    ),
+  },
+];
 
 // ─── CONTACT SECTION ─────────────────────────────────────────────────────────
 
@@ -245,7 +326,7 @@ export default function ContactForm() {
                       custom={i * 0.12}
                       className="flex gap-4 items-start group"
                     >
-                      <div className="w-10 h-10 bg-secondary flex items-center justify-center text-white shrink-0 transition-colors duration-300">
+                      <div className="w-10 h-10 flex items-center justify-center text-white shrink-0 border rounded-full transition-colors duration-300">
                         {item.icon}
                       </div>
                       <div>
@@ -267,17 +348,17 @@ export default function ContactForm() {
                   Follow Us
                 </p>
                 <div className="flex gap-3">
-                  {["in", "tw", "ig", "yt"].map((s) => (
+                  {socials.map((s) => (
                     <motion.a
-                      key={s}
-                      href="#"
+                      key={s.name}
+                      href={s.link}
                       whileHover={{
                         scale: 1.1,
                       }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-9 h-9 bg-secondary flex items-center justify-center text-white text-[10px] font-black tracking-wider uppercase transition-colors duration-300"
+                      className="w-9 h-9 bg-white flex items-center justify-center text-primary text-[10px] font-black tracking-wider rounded-full uppercase transition-colors duration-300"
                     >
-                      {s}
+                      {s.icon}
                     </motion.a>
                   ))}
                 </div>
