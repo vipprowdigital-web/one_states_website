@@ -4,6 +4,7 @@ import { GridPattern } from "../common/Patterns";
 import { SectionReveal } from "../common/SectionReveal";
 import { motion } from "framer-motion";
 import { fadeUp, fadeIn } from "../common/variants";
+import Link from "next/link";
 
 const quickLinks = [
   { name: "About Us", href: "/about" },
@@ -215,18 +216,20 @@ export default function Footer() {
                 All systems operational
               </span>
             </div> */}
-
-            <div className="flex items-center gap-6">
-              {["Privacy Policy", "Terms of Use"].map((l) => (
-                <a
-                  key={l}
-                  href="#"
-                  className="text-white/20 text-xs font-bold tracking-wider uppercase hover:text-secondary transition-colors duration-300 text-center"
-                >
-                  {l}
-                </a>
-              ))}
-            </div>
+<div className="flex items-center gap-6">
+  <Link
+    href="/privacy-policy"
+    className="text-white/20 text-xs font-bold tracking-wider uppercase hover:text-secondary transition-colors duration-300 text-center"
+  >
+    Privacy Policy
+  </Link>
+  <Link
+    href="/terms-of-use"
+    className="text-white/20 text-xs font-bold tracking-wider uppercase hover:text-secondary transition-colors duration-300 text-center"
+  >
+    Terms of Use
+  </Link>
+</div>
             <a
               className="text-white/20 text-xs text-center md:text-left font-semibold tracking-widest uppercase"
               href="https://vipprow.com"

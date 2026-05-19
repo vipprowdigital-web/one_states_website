@@ -29,7 +29,7 @@ export default function BlogHero() {
         </BlogReveal>
 
         <BlogReveal delay={90}>
-          <h1 className="blog-hero-title mb-6 text-5xl font-extrabold leading-tight tracking-[-0.02em] text-[#232627] md:text-7xl">
+          <h1 className="blog-hero-title mb-6 text-5xl font-extrabold leading-tighter tracking-[-0.02em] text-[#232627] md:text-5xl lg:text-7xl">
             The Hospitality{" "}
             <span className="not-italic text-[#ee7124]">
               Journal

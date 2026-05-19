@@ -127,9 +127,14 @@ export const getAllActiveBlogs = async (req, res) => {
 
 export const getBlogById = async (req, res) => {
   try {
-    const blog = await Blog.findById(req.params.id)
-      .populate("category", "name slug")
-      .lean();
+    const { id } = req.params;
+
+const blog = await Blog.findOne({
+  $or: [
+    { _id: mongoose.Types.ObjectId.isValid(id) ? id : null },
+    { slug: id },
+  ],
+}).populate("category");
 
     if (!blog)
       return res

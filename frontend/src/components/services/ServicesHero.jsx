@@ -34,7 +34,7 @@ export default function ServicesHero() {
         </ServicesReveal>
 
         <ServicesReveal delay={100}>
-          <h1 className="srv-hero-h1 mb-6 text-4xl font-extrabold leading-tight tracking-[-0.02em] text-[#232627] sm:text-5xl md:text-6xl">
+          <h1 className="srv-hero-h1 mb-6 text-4xl font-extrabold leading-tight tracking-[-0.02em] text-[#232627] sm:text-5xl md:text-5xl lg:text-7xl">
             Our{" "}
             <span className="not-italic text-[#ee7124]">
               Services

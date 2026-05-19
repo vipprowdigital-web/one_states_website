@@ -15,7 +15,7 @@ export default function AboutHero() {
         </Reveal>
 
         <Reveal delay={90}>
-          <h1 className="mb-7 text-4xl font-extrabold leading-tight tracking-[-0.02em] text-[var(--primary)] sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mb-7 text-3xl font-extrabold leading-tighter tracking-[-0.02em] text-[var(--primary)] sm:text-3xl md:text-5xl lg:text-7xl">
            Building Long-Term
             <br />
             <span className="text-[var(--secondary)] not-italic">

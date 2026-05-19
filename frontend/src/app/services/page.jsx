@@ -5,7 +5,10 @@
 import ServicesStyles from "@/components/services/ServicesStyles";
 import ServicesHero from "@/components/services/ServicesHero";
 import ServicesGrid from "@/components/services/ServicesGrid";
+import ServicesBottomCTA from "@/components/services/ServicesBottomCTA";
 
+import FAQSection from "@/components/common/FAQSection";
+import { servicesFAQ } from "@/components/common/faqData";
 
 export default function ServicesPage() {
   return (
@@ -15,7 +18,14 @@ export default function ServicesPage() {
       <main className="srv-page min-h-screen bg-white text-[#232627]">
         <ServicesHero />
         <ServicesGrid />
-       
+
+        <FAQSection
+          eyebrow="Service FAQ"
+          title="Questions About Our Services"
+          faqs={servicesFAQ}
+        />
+
+        <ServicesBottomCTA />
       </main>
     </>
   );
