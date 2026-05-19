@@ -18,6 +18,12 @@ const router = Router();
 =========================== */
 // Get all active public policies
 router.get("/public", getAllActivePolicies);
+// slug se public fetch
+router.get("/public/slug/:slug", async (req, res) => {
+  const policy = await Policy.findOne({ slug: req.params.slug, isActive: true }).lean();
+  if (!policy) return res.status(404).json({ message: "Not found" });
+  res.json({ data: policy });
+});
 
 // Get a specific public policy by slug
 router.get("/public/:id", getActivePolicyById);
