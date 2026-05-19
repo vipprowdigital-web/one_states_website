@@ -6,6 +6,7 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 import { fadeIn, fadeUp, slideLeft } from "../common/variants";
 import { SectionReveal } from "../common/SectionReveal";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
 const SERVICES = [
   {
@@ -121,9 +122,13 @@ export default function WhatWeDo() {
                             >
                               {svc.desc}
                             </motion.p>
-                            <Link href="" className="text-secondary font-bold">
+                            <Link
+                              href="/services/"
+                              className="text-secondary font-bold flex flex-row items-center gap-2 mt-3"
+                            >
                               {" "}
                               Know More{" "}
+                              <ArrowRight className="-rotate-45" size={18} />
                             </Link>
                           </>
                         )}

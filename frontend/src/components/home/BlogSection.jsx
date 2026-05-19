@@ -66,7 +66,7 @@ export default function BlogSection() {
             whileHover={{ x: 4 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <a
+            <Link
               href="/blog"
               className="inline-flex items-center gap-2 text-primary hover:text-secondary font-black text-sm tracking-wider uppercase transition-colors duration-300 group"
             >
@@ -75,7 +75,7 @@ export default function BlogSection() {
                 size={16}
                 className="text-secondary transform group-hover:translate-x-1 transition-transform"
               />
-            </a>
+            </Link>
           </motion.div>
         </div>
 
