@@ -24,7 +24,7 @@ export default function FeatureMarquee() {
   }, []);
 
   return (
-    <section className="relative w-full bg-primary py-6 overflow-hidden border-y border-secondary/20 z-10">
+    <section className="relative w-full bg-primary py-4 overflow-hidden border-y border-secondary/20 z-10">
       <div className="absolute left-0 top-0 bottom-0 w-12 md:w-32 bg-linear-to-r from-primary to-transparent z-20 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-12 md:w-32 bg-linear-to-l from-primary to-transparent z-20 pointer-events-none" />
 

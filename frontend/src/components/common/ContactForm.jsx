@@ -105,8 +105,6 @@ function FloatingInput({
   );
 }
 
-const baseUrl = "http://localhost:5000/api/v1";
-
 // ─── CONTACT SECTION ─────────────────────────────────────────────────────────
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -126,9 +124,12 @@ export default function ContactForm() {
   useEffect(() => {
     const fetchServices = async () => {
       try {
-        const response = await fetch(`${baseUrl}/service/public/names`, {
-          method: "GET",
-        });
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/service/public/names`,
+          {
+            method: "GET",
+          },
+        );
         if (response.ok) {
           const data = await response.json();
           setFetchedServices(data.data || []);
@@ -178,11 +179,14 @@ export default function ContactForm() {
         // services: formData.services,
         services: formData.services.map((item) => item._id),
       };
-      const response = await fetch(`${baseUrl}/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/contact`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        },
+      );
 
       if (response.ok) {
         setSubmitted(true);
@@ -334,13 +338,13 @@ export default function ContactForm() {
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 border border-primary/30">
           {/* Left Panel */}
-          <SectionReveal className="lg:col-span-2 bg-primary relative overflow-hidden">
+          <SectionReveal className="lg:col-span-2 bg-white md:bg-primary relative overflow-hidden">
             <div className="relative z-10 p-7 md:p-10 lg:p-12 h-full flex flex-col justify-between">
               <div>
                 <motion.p
                   variants={fadeUp}
                   custom={0}
-                  className="text-white text-xs font-black tracking-[0.35em] uppercase mb-8"
+                  className="text-primary md:text-white text-xs font-black tracking-[0.35em] uppercase mb-8"
                 >
                   Contact Information
                 </motion.p>
@@ -353,14 +357,14 @@ export default function ContactForm() {
                       custom={i * 0.12}
                       className="flex gap-4 items-start group"
                     >
-                      <div className="w-10 h-10 flex items-center justify-center text-white shrink-0 border rounded-full transition-colors duration-300">
+                      <div className="w-10 h-10 flex items-center justify-center text-primary md:text-white shrink-0 border rounded-full transition-colors duration-300">
                         {item.icon}
                       </div>
                       <div>
                         <p className="text-secondary text-xs font-black tracking-[0.25em] uppercase mb-1">
                           {item.label}
                         </p>
-                        <p className="text-white/80 text-sm font-semibold leading-relaxed whitespace-pre-line">
+                        <p className="text-primary md:text-white/80 text-sm font-semibold leading-relaxed whitespace-pre-line">
                           {item.value}
                         </p>
                       </div>
@@ -370,7 +374,7 @@ export default function ContactForm() {
               </div>
 
               <motion.div variants={fadeUp} custom={0.5} className="mt-12">
-                <p className="text-white text-xs font-black tracking-[0.25em] uppercase mb-4">
+                <p className="md:text-white text-primary text-xs font-black tracking-[0.25em] uppercase mb-4">
                   Follow Us
                 </p>
                 <div className="flex gap-3">
@@ -380,7 +384,7 @@ export default function ContactForm() {
                       href={s.link}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
-                      className="w-9 h-9 bg-white flex items-center justify-center text-primary text-[10px] font-black tracking-wider rounded-full uppercase transition-colors duration-300"
+                      className="w-9 h-9 bg-secondary md:bg-white flex items-center justify-center text-white md:text-primary text-[10px] font-black tracking-wider rounded-full uppercase transition-colors duration-300"
                       target="_blank"
                     >
                       {s.icon}
@@ -846,8 +850,6 @@ export default function ContactForm() {
 //     ),
 //   },
 // ];
-
-// const baseUrl = "http://localhost:5000/api/v1";
 
 // // ─── CONTACT SECTION ─────────────────────────────────────────────────────────
 

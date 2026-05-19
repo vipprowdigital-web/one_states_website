@@ -4,31 +4,29 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
 
-const TESTIMONIALS = [
-  {
-    name: "Sarah Jenkins",
-    role: "Hospitality Developer",
-    content:
-      "Professional approach with strong market understanding.OneStates Hospitality helped us identify the right hospitality opportunities with clear strategy and professional guidance.",
-    rating: 5,
-  },
-  {
-    name: "David Chen",
-    role: "Hotel Brand Partner",
-    content:
-      "Strong network and excellent execution support. Their industry relationships and practical approach helped us build valuable business collaborations.",
-    rating: 5,
-  },
-  {
-    name: "Elena Rostova",
-    role: "Commercial Asset Owner",
-    content:
-      "Reliable advisory for long-term growth. A highly professional team with strong market understanding and transparent execution throughout the process.",
-    rating: 5,
-  },
-];
-
-const baseUrl = "http://localhost:5000/api/v1";
+// const TESTIMONIALS = [
+//   {
+//     name: "Sarah Jenkins",
+//     role: "Hospitality Developer",
+//     content:
+//       "Professional approach with strong market understanding.OneStates Hospitality helped us identify the right hospitality opportunities with clear strategy and professional guidance.",
+//     rating: 5,
+//   },
+//   {
+//     name: "David Chen",
+//     role: "Hotel Brand Partner",
+//     content:
+//       "Strong network and excellent execution support. Their industry relationships and practical approach helped us build valuable business collaborations.",
+//     rating: 5,
+//   },
+//   {
+//     name: "Elena Rostova",
+//     role: "Commercial Asset Owner",
+//     content:
+//       "Reliable advisory for long-term growth. A highly professional team with strong market understanding and transparent execution throughout the process.",
+//     rating: 5,
+//   },
+// ];
 
 export default function Testimonials() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -38,10 +36,13 @@ export default function Testimonials() {
   useEffect(() => {
     const fetchTestimonials = async () => {
       try {
-        const response = await fetch(`${baseUrl}/testimonial/public`, {
-          method: "GET",
-          headers: { "Content-Type": "application/json" },
-        });
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/testimonial/public`,
+          {
+            method: "GET",
+            headers: { "Content-Type": "application/json" },
+          },
+        );
         // console.log("Response: ", response);
 
         if (response.ok) {

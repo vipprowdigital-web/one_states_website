@@ -19,6 +19,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import Loader from "@/components/common/Loader";
 import { useAppConfigStore } from "@/store/useAppConfigStore";
+import Gallery from "@/components/home/Gallery";
 
 export default function Home() {
   const config = useAppConfigStore((state) => state.config);
@@ -48,6 +49,7 @@ export default function Home() {
       <WhyUs />
       <Experience />
       <Clients />
+      <Gallery />
       <BlogSection />
       <Testimonials />
       <FAQs />
