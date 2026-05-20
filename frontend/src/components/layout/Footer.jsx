@@ -216,20 +216,20 @@ export default function Footer() {
                 All systems operational
               </span>
             </div> */}
-<div className="flex items-center gap-6">
-  <Link
-    href="/privacy-policy"
-    className="text-white/20 text-xs font-bold tracking-wider uppercase hover:text-secondary transition-colors duration-300 text-center"
-  >
-    Privacy Policy
-  </Link>
-  <Link
+            <div className="flex items-center gap-6">
+              <Link
+                href="/privacy-policy"
+                className="text-white/20 text-xs font-bold tracking-wider uppercase hover:text-secondary transition-colors duration-300 text-center"
+              >
+                Privacy Policy
+              </Link>
+              {/* <Link
     href="/terms-of-use"
     className="text-white/20 text-xs font-bold tracking-wider uppercase hover:text-secondary transition-colors duration-300 text-center"
   >
     Terms of Use
-  </Link>
-</div>
+  </Link> */}
+            </div>
             <a
               className="text-white/20 text-xs text-center md:text-left font-semibold tracking-widest uppercase"
               href="https://vipprow.com"

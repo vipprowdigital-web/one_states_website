@@ -13,7 +13,7 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   const navigate = useNavigate();
   return (
-    <main className="flex min-h-screen items-center justify-center bg-white dark:bg-primary p-4">
+    <main className="flex min-h-screen items-center justify-center bg-primary dark:bg-primary p-4">
       <div className="w-full max-w-md flex flex-col items-center gap-16">
         <header className="flex flex-col items-center gap-9 w-full">
           <div className="w-full max-w-[400px] p-4 flex justify-center gap-5">
@@ -37,3 +37,5 @@ export default function Home() {
     </main>
   );
 }
+
+
