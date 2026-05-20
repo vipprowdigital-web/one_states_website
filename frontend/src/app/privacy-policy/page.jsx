@@ -2,8 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || "http://localhost:5000";
-
 export default function PrivacyPolicyPage() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -11,9 +9,12 @@ export default function PrivacyPolicyPage() {
   useEffect(() => {
     async function fetchPolicy() {
       try {
-        const res = await fetch(`${API_BASE}/api/v1/policy/public`, {
-          cache: "no-store",
-        });
+        const res = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/policy/public`,
+          {
+            cache: "no-store",
+          },
+        );
 
         const json = await res.json();
         const policies = json.data || [];
@@ -21,14 +22,14 @@ export default function PrivacyPolicyPage() {
         const found = policies.find(
           (p) =>
             p.slug === "privacy-policy" ||
-            p.title?.toLowerCase().includes("privacy")
+            p.title?.toLowerCase().includes("privacy"),
         );
 
         if (!found) throw new Error("Privacy policy not found");
 
         const detailRes = await fetch(
-          `${API_BASE}/api/v1/policy/public/${found._id}`,
-          { cache: "no-store" }
+          `${process.env.NEXT_PUBLIC_API_URL}/policy/public/${found._id}`,
+          { cache: "no-store" },
         );
 
         const detail = await detailRes.json();
