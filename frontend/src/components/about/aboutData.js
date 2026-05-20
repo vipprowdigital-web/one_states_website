@@ -42,3 +42,49 @@ export const team = [
     bio: "Specialist in process transformation and revenue optimisation for mid-scale and luxury segments.",
   },
 ];
+
+export const collaborationServices = [
+  {
+    eyebrow: "Hospitality Joint Ventures",
+    title: "Hospitality Joint Ventures",
+    description:
+      "We facilitate hospitality partnerships and collaborations for hotel developments, resorts and destination projects.",
+    overviewTitle: "Suitable For",
+    overview:
+      "Hotel Owners, Resort Developers, Hospitality Investors, Landowners, Hospitality Brands",
+    highlightTitle: "Services Include",
+    highlights: [
+      "Strategic Partner Identification",
+      "Hospitality Brand Collaborations",
+      "Project Alignment Support",
+      "Expansion Advisory",
+      "Growth Strategy Consulting",
+    ],
+  },
+  {
+    eyebrow: "Housing Project Collaborations",
+    title: "Housing Project Collaborations",
+    description:
+      "OneStates Hospitality supports developers and landowners with joint venture opportunities for residential and mixed-use housing developments.",
+    overviewTitle: "",
+    overview: "",
+    highlightTitle: "Collaboration Support Includes",
+    highlights: [
+      "Developer Partnerships",
+      "Landowner Collaborations",
+      "Strategic Project Structuring",
+      "Expansion Opportunities",
+      "Business Alignment Support",
+    ],
+  },
+  {
+    eyebrow: "Warehouse & Industrial Collaborations",
+    title: "Warehouse & Industrial Collaborations",
+    description:
+      "We help businesses and developers create strategic partnerships for warehouse infrastructure, logistics parks and industrial developments.",
+    overviewTitle: "Ideal For",
+    overview:
+      "Warehouse Projects, Logistics Infrastructure, Industrial Developments, Supply Chain Expansion Projects",
+    highlights: [],
+  },
+];

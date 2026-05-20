@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 function getCategoryName(category) {
@@ -27,10 +28,12 @@ export default function FeaturedPost({ blog }) {
       className="group block overflow-hidden rounded-3xl border-[1.5px] border-[#e8e8e8] bg-white text-inherit no-underline shadow-[0_8px_32px_rgba(0,0,0,.06)] transition-all duration-300 hover:-translate-y-1 hover:border-[#ee7124]/40 hover:shadow-[0_28px_70px_rgba(0,0,0,.12)]"
     >
       <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="relative min-h-[300px] overflow-hidden bg-[#f2f2f2] md:min-h-[420px]">
-          <img
+        <div className="relative min-h-75 overflow-hidden bg-[#f2f2f2] md:min-h-105">
+          <Image
             src={blog.thumbnail || "/images/blog/default.jpg"}
             alt={blog.title}
+            width={1000}
+            height={500}
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
 
@@ -44,7 +47,7 @@ export default function FeaturedPost({ blog }) {
             {getCategoryName(blog.category)}
           </span>
 
-          <h2 className="mb-5 text-2xl font-extrabold leading-tight text-[#232627] transition-colors duration-300 group-hover:text-[#ee7124] md:text-3xl">
+          <h2 className="mb-5 text-2xl font-extrabold leading-tight text-[#232627] transition-colors duration-300 group-hover:text-[#ee7124] md:text-2xl">
             {blog.title}
           </h2>
 
@@ -55,9 +58,9 @@ export default function FeaturedPost({ blog }) {
           </p>
 
           <div className="flex items-center justify-between gap-4">
-            <p className="text-xs font-medium text-[#888]">
+            {/* <p className="text-xs font-medium text-[#888]">
               {formatDate(blog.createdAt)} · {blog.read_time || "5 min"}
-            </p>
+            </p> */}
 
             <span className="flex h-10 w-10 items-center justify-center rounded-full border-[1.5px] border-[#e8e8e8] text-base font-bold text-[#ee7124] transition-transform duration-300 group-hover:translate-x-1">
               →

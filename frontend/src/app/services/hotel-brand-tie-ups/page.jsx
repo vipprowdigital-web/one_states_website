@@ -1,19 +1,20 @@
 import ServiceDetailTemplate from "@/components/services/ServiceDetailTemplate";
+import { hotelServices } from "@/seed/servicesData";
 
 export default function HotelBrandTieUpsPage() {
   return (
     <ServiceDetailTemplate
       eyebrow="Profitable Hospitality Partnerships"
       title="Hotel Brand Tie-ups"
-      description="We assist hotel owners, investors and hospitality brands in creating profitable partnerships through structured brand tie-up models."
+      description="We specialize in connecting hospitality projects with leading hotel brands through structured business models, strategic negotiations and growth-focused advisory solutions."
       image="/images/services/hotel-brand-tie-ups.jpg"
-      overviewTitle="Structured partnerships for hotel growth"
-      overview="Our hotel brand tie-up advisory helps property owners evaluate the right business model, connect with suitable hospitality brands, and create a partnership structure that supports long-term profitability, operational stability, and brand value."
+      overviewTitle="Strategic Hotel Brand Partnerships for Long-Term Growth"
+      overview="OneStates Hospitality helps hotel owners, resort developers and hospitality investors identify the right hotel brand partnerships for sustainable business growth and successful hospitality expansion. Whether you are developing a new hotel, repositioning an existing property or exploring hospitality expansion opportunities, our team helps you choose the right operational model based on your project goals, market potential and investment strategy."
       highlights={[
-        "Management Contract",
-        "Minimum Guarantee / Revenue Sharing",
-        "Franchise Model",
-        "Pure Lease Model",
+        "Hotels, Resorts and Business Hotels",
+        "Boutique Hospitality Projects",
+        "Luxury Hospitality Developments",
+        "Mixed-Use Hospitality Projects",
       ]}
       processPoints={[
         "Understand property potential, location strength and owner objectives.",
@@ -22,7 +23,10 @@ export default function HotelBrandTieUpsPage() {
         "Support negotiation of commercial and operational terms.",
         "Build a clear structure for long-term brand-led growth.",
       ]}
-      ctaTitle="Looking for the right hotel brand partnership?"
+      ctaTitle="Let’s Build the Right Hospitality Partnership"
+      services={hotelServices}
+      serviceHeading="Our Hotel Brand Tie-Up Services"
+      ctaDesc="Whether you are planning a new hotel project, looking for a hotel operator or exploring hospitality expansion opportunities, OneStates Hospitality helps you connect with the right brands and business models for long-term success."
     />
   );
 }

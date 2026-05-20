@@ -16,17 +16,20 @@ export default function AboutHero() {
 
         <Reveal delay={90}>
           <h1 className="mb-7 text-3xl font-extrabold leading-tighter tracking-[-0.02em] text-primary sm:text-3xl md:text-5xl lg:text-7xl">
-           Building Long-Term
+            Building Long-Term
             <br />
             <span className="text-secondary not-italic">
-           Hospitality Growth 
+              Hospitality Growth
             </span>
           </h1>
         </Reveal>
 
         <Reveal delay={180}>
           <p className="max-w-162.5 text-base font-medium leading-8 text-(--primary)/65 md:mx-auto md:text-lg">
-         OneStates Hospitality is a strategic consulting and advisory firm helping hospitality brands, hotel owners, developers and investors identify the right opportunities for expansion and business growth. 
+            OneStates Hospitality is a strategic hospitality consulting and
+            advisory firm specializing in hotel brand tie-ups, commercial
+            leasing, warehouse solutions, asset transactions and business
+            collaborations.
           </p>
         </Reveal>
       </div>

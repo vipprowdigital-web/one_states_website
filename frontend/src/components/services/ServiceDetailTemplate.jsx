@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { scrollTo } from "../common/scrollTo";
 
 export default function ServiceDetailTemplate({
   eyebrow,
@@ -9,9 +12,12 @@ export default function ServiceDetailTemplate({
   overviewTitle,
   overview,
   highlights,
-  processPoints = [],
+  // processPoints = [],
   reverse = false,
   ctaTitle = "Discuss this service with our team",
+  services,
+  serviceHeading,
+  ctaDesc,
 }) {
   return (
     <main className="min-h-screen bg-white font-[Raleway] text-[#232627]">
@@ -61,21 +67,101 @@ export default function ServiceDetailTemplate({
               Service Overview
             </p>
 
-            <h2 className="mb-6 text-3xl font-extrabold leading-tight tracking-[-0.02em] text-[#232627] md:text-5xl">
+            <h2 className="mb-6 text-2xl font-extrabold leading-tight tracking-[-0.02em] text-[#232627] md:text-3xl">
               {overviewTitle}
             </h2>
 
-            <p className="text-base font-medium leading-8 text-[#232627]/65 md:text-lg">
+            <p className="text-md font-medium leading-8 text-[#232627]/65 md:text-md">
               {overview}
             </p>
 
-            <Link
-              href="/contact"
+            <div
+              onClick={() => scrollTo("contact")}
               className="mt-8 inline-block rounded-full bg-[#ee7124] px-8 py-3.5 text-sm font-bold tracking-[0.06em] text-white no-underline shadow-[0_8px_28px_rgba(238,113,36,.28)] transition-transform duration-200 hover:-translate-y-0.5"
             >
               Get Consultation →
-            </Link>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* SERVICES */}
+      <section className="bg-[#f9f9f9] px-6 py-16 md:py-24 font-[Raleway]">
+        <div className="mx-auto max-w-6xl">
+          {/* Section Header */}
+          <div className="mb-14 text-center">
+            <p className="mb-4 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.32em] text-[#ee7124] md:text-sm">
+              <span className="block h-px w-8 bg-[#ee7124]" />
+              Our Offerings
+              <span className="block h-px w-8 bg-[#ee7124]" />
+            </p>
+            <h2 className="text-3xl font-extrabold leading-tight tracking-[-0.02em] text-[#232627] md:text-5xl">
+              {serviceHeading}
+            </h2>
+          </div>
+
+          {/* Services Grid */}
+          {services.length !== 0 && (
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              {services.map((service) => (
+                <div
+                  key={service.title}
+                  className="group flex flex-col justify-between overflow-hidden rounded-3xl border border-[#ebebeb] bg-white p-6 shadow-[0_12px_40px_rgba(0,0,0,.03)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(238,113,36,0.08)]"
+                >
+                  <div>
+                    {/* Meta & Typography */}
+                    <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-[#ee7124]">
+                      {service.eyebrow}
+                    </p>
+                    <h3 className="mb-3 text-2xl font-extrabold tracking-[-0.01em] text-[#232627]">
+                      {service.title}
+                    </h3>
+                    <p className="mb-6 text-sm font-medium leading-7 text-[#232627]/65">
+                      {service.description}
+                    </p>
+
+                    {/* Targeted Tags */}
+                    {service.overview && service.overviewTitle && (
+                      <div className="mb-6 border-t border-[#f2f2f2] pt-4">
+                        <span className="text-xs font-bold uppercase tracking-wider text-[#232627]/40 block mb-2">
+                          {service.overviewTitle}:
+                        </span>
+                        <div className="flex flex-wrap gap-2">
+                          {service.overview.split(", ").map((tag) => (
+                            <span
+                              key={tag}
+                              className="rounded-md bg-[#f9f9f9] px-2.5 py-1 text-xs font-semibold text-[#232627]/80 border border-[#ebebeb]"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Hightlights */}
+                    {service.highlights.length !== 0 && (
+                      <div className="mb-6 border-t border-[#f2f2f2] pt-4">
+                        <span className="text-xs font-bold uppercase tracking-wider text-[#232627]/40 block mb-2">
+                          {service.highlightTitle}
+                        </span>
+                        <div className="flex flex-wrap gap-2">
+                          {service.highlights.map((tag) => (
+                            <span
+                              key={tag}
+                              className="rounded-md bg-secondary/5 px-2.5 py-1 text-xs font-semibold text-secondary border border-secondary"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 
@@ -85,12 +171,12 @@ export default function ServiceDetailTemplate({
           <div className="mb-12 text-left md:text-center">
             <p className="mb-5 inline-flex items-center justify-start gap-3 text-xs font-bold uppercase tracking-[0.32em] text-[#ee7124] md:justify-center md:text-sm">
               <span className="block h-px w-8 bg-[#ee7124]" />
-              Key Highlights
+              Industries
               <span className="block h-px w-8 bg-[#ee7124]" />
             </p>
 
             <h2 className="text-3xl font-extrabold leading-tight tracking-[-0.02em] text-[#232627] md:text-5xl">
-              What We Cover
+              Industries We Work With
             </h2>
           </div>
 
@@ -114,41 +200,40 @@ export default function ServiceDetailTemplate({
       </section>
 
       {/* Numbered Points */}
-     {/* Numbered Points */}
-{processPoints.length > 0 && (
-  <section className="bg-white px-6 py-16 md:py-20">
-    <div className="mx-auto max-w-4xl">
-      <div className="mb-10 text-left md:text-center">
-        <p className="mb-5 inline-flex items-center justify-start gap-3 text-xs font-bold uppercase tracking-[0.32em] text-[#ee7124] md:justify-center md:text-sm">
-          <span className="block h-px w-8 bg-[#ee7124]" />
-          Our Approach
-          <span className="block h-px w-8 bg-[#ee7124]" />
-        </p>
+      {/* {processPoints.length > 0 && (
+        <section className="bg-white px-6 py-16 md:py-20">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-10 text-left md:text-center">
+              <p className="mb-5 inline-flex items-center justify-start gap-3 text-xs font-bold uppercase tracking-[0.32em] text-[#ee7124] md:justify-center md:text-sm">
+                <span className="block h-px w-8 bg-[#ee7124]" />
+                Our Approach
+                <span className="block h-px w-8 bg-[#ee7124]" />
+              </p>
 
-        <h2 className="text-3xl font-extrabold leading-tight tracking-[-0.02em] text-[#232627] md:text-5xl">
-          How We Work
-        </h2>
-      </div>
+              <h2 className="text-3xl font-extrabold leading-tight tracking-[-0.02em] text-[#232627] md:text-5xl">
+                Industries We Work With
+              </h2>
+            </div>
 
-      <div className="space-y-6">
-        {processPoints.map((point, index) => (
-          <div
-            key={point}
-            className="flex gap-5 border-b border-[#ebebeb] pb-6 last:border-b-0"
-          >
-            <span className="shrink-0 text-2xl font-extrabold text-[#ee7124]">
-              {index + 1}.
-            </span>
+            <div className="space-y-6">
+              {processPoints.map((point, index) => (
+                <div
+                  key={point}
+                  className="flex gap-5 border-b border-[#ebebeb] pb-6 last:border-b-0"
+                >
+                  <span className="shrink-0 text-2xl font-extrabold text-[#ee7124]">
+                    {index + 1}.
+                  </span>
 
-            <p className="text-base font-medium leading-8 text-[#232627]/70 md:text-lg">
-              {point}
-            </p>
+                  <p className="text-base font-medium leading-8 text-[#232627]/70 md:text-lg">
+                    {point}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </section>
-)}
+        </section>
+      )} */}
       {/* CTA */}
       <section className="bg-[#232627] px-6 py-16 text-left md:text-center">
         <div className="mx-auto max-w-3xl">
@@ -161,16 +246,15 @@ export default function ServiceDetailTemplate({
           </h2>
 
           <p className="mx-auto mb-8 max-w-2xl text-base font-medium leading-8 text-white/65">
-            Share your requirement and our team will guide you with the right
-            hospitality or real estate solution.
+            {ctaDesc}
           </p>
 
-          <Link
-            href="/contact"
+          <div
+            onClick={() => scrollTo("contact")}
             className="inline-block rounded-full bg-[#ee7124] px-9 py-4 text-sm font-bold tracking-[0.07em] text-white no-underline"
           >
-            Contact Us →
-          </Link>
+            Connect With Our Team →
+          </div>
         </div>
       </section>
     </main>

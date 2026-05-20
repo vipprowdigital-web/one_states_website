@@ -10,14 +10,12 @@ export default function AboutStats() {
         {stats.map((s, i) => (
           <Reveal key={s.l} delay={i * 70}>
             {/* Numbers Orange */}
-            <p className="m-0 text-4xl font-extrabold text-[var(--secondary)] md:text-5xl">
+            <p className="m-0 text-4xl font-extrabold text-secondary md:text-5xl">
               {s.n}
             </p>
 
             {/* Labels White */}
-            <p className="mt-2 text-sm tracking-wide text-white">
-              {s.l}
-            </p>
+            <p className="mt-2 text-sm tracking-wide text-white">{s.l}</p>
           </Reveal>
         ))}
       </div>

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -72,11 +73,17 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className={`text-xl tracking-wider cursor-pointer font-extrabold transition-colors duration-300 ${
+          className={`w-30 text-xl tracking-wider cursor-pointer font-extrabold transition-colors duration-300 ${
             isScrolled ? "text-white" : "text-primary"
           }`}
         >
-          MYLOGO
+          <Image
+            width={1000}
+            height={500}
+            src="/one-states-logo.png"
+            alt="One States Logo"
+            className="w-full h-full"
+          />
         </Link>
 
         {/* Hamburger Icon Button */}

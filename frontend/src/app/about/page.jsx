@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import AboutHero from "@/components/about/AboutHero";
@@ -9,7 +7,7 @@ import AboutFounder from "@/components/about/AboutFounder";
 import AboutValues from "@/components/about/AboutValues";
 import AboutPrinciples from "@/components/about/AboutPrinciples";
 import WhyChooseUs from "@/components/about/WhyChooseUs";
-
+import AboutDesc from "@/components/about/AboutDesc";
 
 export default function AboutPage() {
   return (
@@ -92,18 +90,16 @@ export default function AboutPage() {
       >
         <AboutHero />
         <AboutStats />
+        <AboutDesc />
         <AboutFounder />
-        <AboutStory />
-        <AboutPrinciples />
-       <WhyChooseUs />
-        <AboutValues />
-       
-       
+        {/* <AboutStory /> */}
+        {/* <AboutPrinciples /> */}
+        <WhyChooseUs />
+        {/* <AboutValues /> */}
       </main>
     </>
   );
 }
-
 
 // "use client";
 // import Image from "next/image";

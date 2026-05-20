@@ -1,4 +1,5 @@
 import ServiceDetailTemplate from "@/components/services/ServiceDetailTemplate";
+import { assetServices } from "@/seed/servicesData";
 
 export default function LargeAssetTransactionAdvisoryPage() {
   return (
@@ -6,15 +7,18 @@ export default function LargeAssetTransactionAdvisoryPage() {
       reverse={true}
       eyebrow="High-Value Real Estate"
       title="Large Asset Transaction Advisory"
-      description="We offer advisory support for high-value real estate and hospitality asset transactions with a professional, market-driven approach."
+      description="Our expertise includes hospitality assets, commercial properties, land acquisitions and investment-focused opportunities designed for long-term business value and growth."
       image="/images/services/large-asset-transaction-advisory.jpg"
-      overviewTitle="Advisory for high-value asset decisions"
-      overview="We support owners, investors, and developers in evaluating, positioning, and transacting large assets such as hotels, land parcels, commercial properties, and investment-grade real estate opportunities."
+      overviewTitle="Strategic Advisory for Hospitality, Commercial & High-Value Asset Transactions"
+      overview="OneStates Hospitality provides professional advisory services for large asset transactions across hospitality, commercial and investment sectors. We work with hotel owners, developers, investors and business groups to identify strategic opportunities and facilitate structured asset transactions. With a relationship-driven and market-focused approach, we help clients navigate complex transactions with clarity, strategic insight and professional support.
+"
       highlights={[
-        "Hotels",
-        "Land Parcels",
-        "Commercial Assets",
-        "Investment Properties",
+        "Hospitality Brands",
+        "Hotel Owners & Developers",
+        "Commercial Investors",
+        "Real Estate Businesses",
+        "Institutional Stakeholders",
+        "Business Groups",
       ]}
       processPoints={[
         "Understand asset type, location, ownership structure and transaction goal.",
@@ -23,7 +27,10 @@ export default function LargeAssetTransactionAdvisoryPage() {
         "Connect with relevant buyers, investors or strategic partners.",
         "Support negotiation and closure with a professional process.",
       ]}
-      ctaTitle="Planning a large asset transaction?"
+      ctaTitle="Unlock High-Value Growth Opportunities"
+      serviceHeading="Our Asset Transaction Advisory Services"
+      services={assetServices}
+      ctaDesc="Whether you are exploring hospitality investments, commercial asset opportunities or strategic land acquisitions, OneStates Hospitality provides the advisory expertise and market support required for informed and growth-focused decisions."
     />
   );
 }
