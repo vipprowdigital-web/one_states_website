@@ -4,7 +4,7 @@ import ServicesReveal from "./ServicesReveal";
 
 export default function ServicesHero() {
   return (
-    <section className="relative flex min-h-[420px] items-center justify-center overflow-hidden bg-white px-6 py-20 text-left md:min-h-[520px] md:text-center">
+    <section className="relative flex min-h-105 items-center justify-center overflow-hidden bg-white px-6 md:py-20 pt-20 text-left md:min-h-130 md:text-center">
       {/* Clean subtle background */}
       <div className="pointer-events-none absolute inset-0 bg-white" />
 
@@ -20,11 +20,11 @@ export default function ServicesHero() {
       />
 
       {/* Decorative spinning rings */}
-      <div className="srv-spin pointer-events-none absolute left-8 top-8 z-[1] hidden h-[84px] w-[84px] rounded-full border border-dashed border-[rgba(238,113,36,.35)] md:block" />
+      <div className="srv-spin pointer-events-none absolute left-8 top-8 z-1 hidden h-21 w-21 rounded-full border border-dashed border-[rgba(238,113,36,.35)] md:block" />
 
-      <div className="srv-spin-r pointer-events-none absolute bottom-10 right-10 z-[1] hidden h-[110px] w-[110px] rounded-full border border-dashed border-[rgba(238,113,36,.22)] md:block" />
+      <div className="srv-spin-r pointer-events-none absolute bottom-10 right-10 z-1 hidden h-27.5 w-27.5 rounded-full border border-dashed border-[rgba(238,113,36,.22)] md:block" />
 
-      <div className="relative z-[2] mx-auto max-w-[820px]">
+      <div className="relative z-2 mx-auto max-w-205 mt-10">
         <ServicesReveal>
           <p className="mb-5 inline-flex items-center justify-start gap-3 text-xs font-bold uppercase tracking-[0.32em] text-[#ee7124] md:justify-center md:text-sm">
             <span className="block h-px w-8 bg-[#ee7124]" />
@@ -34,16 +34,13 @@ export default function ServicesHero() {
         </ServicesReveal>
 
         <ServicesReveal delay={100}>
-          <h1 className="srv-hero-h1 mb-6 text-4xl font-extrabold leading-tight tracking-[-0.02em] text-[#232627] sm:text-5xl md:text-5xl lg:text-7xl">
-            Our{" "}
-            <span className="not-italic text-[#ee7124]">
-              Services
-            </span>
+          <h1 className=" mb-6 text-4xl font-extrabold leading-tight tracking-[-0.02em] text-[#232627] md:text-5xl lg:text-7xl">
+            Our <span className="not-italic text-[#ee7124]">Services</span>
           </h1>
         </ServicesReveal>
 
         <ServicesReveal delay={190}>
-          <p className="mb-8 max-w-[620px] text-base font-medium leading-8 text-[#232627]/65 md:mx-auto md:text-lg">
+          <p className="mb-8 max-w-155 text-base font-medium leading-8 text-[#232627]/65 md:mx-auto md:text-lg">
             From hotel brand tie-ups to large asset transactions — we deliver
             end-to-end hospitality and real estate consultancy with precision
             and deep market expertise.

@@ -113,7 +113,7 @@ export default function PrivacyPolicyPage() {
             className="
               max-w-none font-[Raleway] text-base font-medium leading-8 text-[#232627]/70 md:text-lg
 
-              [&_*]:not-italic
+              **:not-italic
               [&_p]:mb-5
               [&_p]:font-medium
               [&_p]:leading-8

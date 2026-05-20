@@ -5,6 +5,7 @@ import { ArrowUpRight, Calendar, User, ArrowRight } from "lucide-react";
 import { GridPattern } from "../common/Patterns";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const RECENT_POSTS = [
   {
@@ -41,8 +42,39 @@ const RECENT_POSTS = [
 ];
 
 export default function BlogSection() {
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(
+          `${process.env.NEXT_PUBLIC_API_URL}/blog?page=1&limit=3`,
+          {
+            method: "GET",
+          },
+        );
+        if (response.ok) {
+          const data = await response.json();
+          console.log("DATA FROM BLOG: ", data);
+
+          setBlogs(data.data || []);
+          setLoading(false);
+        }
+      } catch (e) {
+        console.error("Error while making API call..", e);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchBlogs();
+  }, []);
+
+  if (blogs.length === 0) return null;
+
   return (
-    <section className="relative bg-white py-20 md:py-28 overflow-hidden z-10 border-t border-primary/10">
+    <section className="relative bg-white py-10 md:py-28 overflow-hidden z-10 border-t border-primary/10">
       {/* Background visual texture */}
       <GridPattern opacity={0.02} />
 
@@ -81,7 +113,7 @@ export default function BlogSection() {
 
         {/* ─── BLOG CARDS GRID ─── */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {RECENT_POSTS.map((post, index) => (
+          {blogs.slice(0, 3).map((post, index) => (
             <motion.div
               key={post.slug}
               initial={{ opacity: 0, y: 30 }}
@@ -93,16 +125,18 @@ export default function BlogSection() {
               {/* Card Image Wrapper Window */}
               <div className="relative aspect-16/10 overflow-hidden bg-primary/5">
                 <Image
-                  src={post.image}
+                  src={post.thumbnail}
                   alt={post.title}
                   width={1000}
                   height={500}
                   className="w-full h-full object-cover grayscale-20 contrast-105 group-hover:scale-105 group-hover:grayscale-0 transition-transform duration-500 ease-out"
                 />
                 {/* Floating Category Badge over the card image overlay */}
-                <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-md text-white text-[10px] font-black tracking-widest uppercase px-3 py-1 rounded-md border border-white/10">
-                  Insights
-                </div>
+                {post?.category?.name && (
+                  <div className="absolute top-4 left-4 bg-primary/90 backdrop-blur-md text-white text-[10px] font-black tracking-widest uppercase px-3 py-1 rounded-md border border-white/10">
+                    {post?.category?.name}
+                  </div>
+                )}
               </div>
 
               {/* Card Content Details */}
@@ -111,12 +145,12 @@ export default function BlogSection() {
                 <div className="flex items-center gap-4 text-primary/40 text-xs mb-4 font-medium">
                   <div className="flex items-center gap-1.5">
                     <Calendar size={13} className="text-secondary" />
-                    <span>{post.date}</span>
+                    <span>{new Date(post.createdAt).toDateString()}</span>
                   </div>
-                  <div className="flex items-center gap-1.5">
+                  {/* <div className="flex items-center gap-1.5">
                     <User size={13} />
                     <span>{post.author}</span>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Article Title Header */}
@@ -126,13 +160,13 @@ export default function BlogSection() {
 
                 {/* Article Snippet Excerpt */}
                 <p className="text-primary/60 text-sm leading-relaxed mb-6 line-clamp-3">
-                  {post.excerpt}
+                  {post.short_description}
                 </p>
 
                 {/* Card-Level Individual CTA Link */}
                 <div className="mt-auto pt-4 border-t border-primary/5">
                   <a
-                    href={`/blog/${post.slug}`} // Direct path routing to target individual sub-post page
+                    href={`/blog/${post.slug}`}
                     className="inline-flex items-center gap-2 text-primary font-bold text-sm tracking-wide group-hover:text-secondary transition-colors duration-200"
                   >
                     <span>Read Full Article</span>

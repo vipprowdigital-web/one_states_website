@@ -73,7 +73,7 @@ export default function FAQs() {
                   className="w-full flex items-center justify-between p-6 text-left focus:outline-none select-none"
                 >
                   <span
-                    className={`text-lg font-bold tracking-tight transition-colors duration-200 ${
+                    className={`text-md font-bold tracking-tight transition-colors duration-200 ${
                       isOpen ? "text-secondary" : "text-primary"
                     }`}
                   >
@@ -108,7 +108,7 @@ export default function FAQs() {
                       }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-6 pr-12 text-primary/70 text-base font-semibold leading-relaxed border-t border-primary/5 pt-3">
+                      <div className="px-6 pb-6 pr-12 text-primary/70 text-sm font-semibold leading-relaxed border-t border-primary/5 pt-3">
                         {faq.answer}
                       </div>
                     </motion.div>

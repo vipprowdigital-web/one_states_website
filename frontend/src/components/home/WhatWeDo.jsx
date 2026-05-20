@@ -45,7 +45,10 @@ export default function WhatWeDo() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative bg-white py-28 overflow-hidden" id="services">
+    <section
+      className="relative bg-white py-10 md:py-28 overflow-hidden"
+      id="services"
+    >
       <DiagPattern />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -169,7 +172,7 @@ export default function WhatWeDo() {
           <SectionReveal className="block">
             <motion.div variants={fadeUp} custom={0.2} className="relative">
               {/* Main image */}
-              <div className="relative h-137.5 overflow-hidden">
+              <div className="relative h-120 md:h-137.5 overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={active}
@@ -183,6 +186,7 @@ export default function WhatWeDo() {
                         [
                           "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80",
                           "https://images.unsplash.com/photo-1560185127-6a7a5b4e32f2?w=700&q=80",
+                          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80",
                           "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80",
                           "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&q=80",
                         ][active]

@@ -64,7 +64,7 @@ export default function Hero() {
                 animate="visible"
                 custom={i * 0.15 + 0.2}
               >
-                <h1 className="font-black text-3xl md:text-4xl lg:text-7xl text-primary leading-none tracking-tight">
+                <h1 className="font-black text-5xl lg:text-7xl text-primary leading-none tracking-tight">
                   {line.includes("STATES") ? (
                     <>
                       <span className="text-secondary">STATES</span>

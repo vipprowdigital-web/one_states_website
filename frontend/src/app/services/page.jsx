@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import ServicesStyles from "@/components/services/ServicesStyles";

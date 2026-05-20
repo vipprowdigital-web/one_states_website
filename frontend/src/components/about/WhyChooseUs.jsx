@@ -194,7 +194,7 @@ export default function WhyChooseUs() {
         }
       `}</style>
 
-      <section className="wcu-wrap relative overflow-hidden border-t border-[#ebebeb] bg-white px-6 py-[100px]">
+      <section className="wcu-wrap relative overflow-hidden border-t border-[#ebebeb] bg-white px-6 md:py-25 py-10">
         <div
           aria-hidden
           className="wcu-spin pointer-events-none absolute right-[60px] top-10 h-24 w-24 rounded-full border-[1.5px] border-dashed border-[rgba(238,113,36,.3)]"
