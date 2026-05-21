@@ -71,9 +71,9 @@ export default function PrivacyPolicyPage() {
   const isHtml = /<[a-z][\s\S]*>/i.test(rawContent);
 
   return (
-    <main className="min-h-screen bg-white font-[Raleway] text-[#232627]">
+    <main className="min-h-screen bg-white text-[#232627]">
       {/* Header */}
-      <section className="relative overflow-hidden bg-white px-6 pb-16 pt-20 text-left md:text-center">
+      <section className="relative overflow-hidden bg-white px-6 sm:pb-16 pt-20 pb-10 text-left md:text-center">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
@@ -111,8 +111,8 @@ export default function PrivacyPolicyPage() {
       <div className="h-px w-full bg-[#ebebeb]" />
 
       {/* Content */}
-      <section className="px-6 py-16 md:py-20">
-        <div className="mx-auto">
+      <section className="px-6 pb-10 md:py-10">
+        <div className="mx-auto max-w-5xl">
           {isHtml ? (
             // HTML content: rendered via dangerouslySetInnerHTML with full styling
             <article
@@ -209,4 +209,3 @@ export default function PrivacyPolicyPage() {
     </main>
   );
 }
-
