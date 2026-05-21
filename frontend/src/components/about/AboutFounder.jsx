@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 
 export default function AboutFounder() {
   return (
-    <section className="border-t border-[#ebebeb] bg-white px-6 md:py-25 pt-10">
+    <section className="border-t border-[#ebebeb] bg-white px-6 md:py-25 pt-5 sm:pt-10">
       <div className="md:mb-16 mb-10 text-left md:text-center">
         <Reveal>
           <p className="mb-5 inline-flex items-center justify-start gap-3 text-xs font-bold uppercase tracking-[0.32em] text-secondary md:justify-center md:text-sm">

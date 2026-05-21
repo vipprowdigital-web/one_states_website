@@ -57,7 +57,7 @@ export default function BlogSection() {
         );
         if (response.ok) {
           const data = await response.json();
-          console.log("DATA FROM BLOG: ", data);
+          // console.log("DATA FROM BLOG: ", data);
 
           setBlogs(data.data || []);
           setLoading(false);

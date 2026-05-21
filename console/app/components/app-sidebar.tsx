@@ -44,7 +44,7 @@ import { useUserProfile } from "~/features/user/userApi";
 import { useSelector } from "react-redux";
 import type { RootState } from "~/redux/store";
 import { useLocation } from "react-router";
-import vipprow_logo from "@/welcome/vipprow.png";
+import one_states_logo_light from "@/welcome/one-states-logo-light.png";
 
 type NavItem = {
   title: string;
@@ -232,9 +232,9 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <div className=" text-sidebar-primary-foreground flex aspect-square size-10 items-center justify-center rounded-lg">
+            <div className="text-sidebar-primary-foreground flex aspect-square size-10 items-center justify-center rounded-lg">
               <img
-                src={vipprow_logo}
+                src={one_states_logo_light}
                 alt="Image"
                 className="absolute inset-0 h-full w-full object-contain"
               />

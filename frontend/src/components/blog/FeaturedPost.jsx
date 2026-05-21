@@ -30,11 +30,12 @@ export default function FeaturedPost({ blog }) {
       <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="relative min-h-75 overflow-hidden bg-[#f2f2f2] md:min-h-105">
           <Image
-            src={blog.thumbnail || "/images/blog/default.jpg"}
+            src={blog.thumbnail || "/images/modern-skyscaper.jpg"}
             alt={blog.title}
             width={1000}
             height={500}
             className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            loading="lazy"
           />
 
           <span className="absolute left-6 top-6 rounded-full bg-[#ee7124] px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-white">
@@ -42,12 +43,12 @@ export default function FeaturedPost({ blog }) {
           </span>
         </div>
 
-        <div className="flex flex-col justify-center p-8 md:p-12">
+        <div className="flex flex-col justify-center px-4 py-3 sm:p-8 md:p-12">
           <span className="mb-5 inline-block self-start rounded-full bg-[#ee7124]/10 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em] text-[#ee7124]">
             {getCategoryName(blog.category)}
           </span>
 
-          <h2 className="mb-5 text-2xl font-extrabold leading-tight text-[#232627] transition-colors duration-300 group-hover:text-[#ee7124] md:text-2xl">
+          <h2 className="mb-5 text-lg sm:text-2xl font-extrabold leading-tight text-[#232627] transition-colors duration-300 group-hover:text-[#ee7124] md:text-2xl">
             {blog.title}
           </h2>
 

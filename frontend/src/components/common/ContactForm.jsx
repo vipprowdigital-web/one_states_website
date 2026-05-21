@@ -281,7 +281,7 @@ export default function ContactForm() {
 
   return (
     <section
-      className="relative bg-white overflow-hidden md:py-28 py-10"
+      className="relative bg-white overflow-hidden pt-20 md:py-28 py-10"
       id="contact"
     >
       <GridPattern id="contact-grid" color="white" opacity={0.04} />

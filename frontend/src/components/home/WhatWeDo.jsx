@@ -53,7 +53,7 @@ export default function WhatWeDo() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <SectionReveal>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-20">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-5 md:mb-20">
             <div>
               <motion.div
                 variants={fadeIn}
@@ -100,9 +100,9 @@ export default function WhatWeDo() {
                     active === i ? "border-b-secondary" : ""
                   }`}
                 >
-                  <div className="flex items-start gap-6">
+                  <div className="flex items-start gap-3 sm:gap-6">
                     <span
-                      className={`font-black text-5xl leading-none transition-colors duration-300 ${
+                      className={`font-black text-2xl sm:text-5xl leading-none transition-colors duration-300 ${
                         active === i ? "text-secondary" : "text-[#e5e5e5]"
                       }`}
                     >
@@ -225,7 +225,7 @@ export default function WhatWeDo() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8 }}
-                className="absolute -top-5 -left-5 bg-primary px-5 py-2"
+                className="absolute -top-5 -left-3 sm:-left-5 bg-primary px-5 py-2"
               >
                 <p className="text-secondary font-black text-lg">4,200+</p>
                 <p className="text-white/50 text-xs font-bold tracking-widest uppercase">

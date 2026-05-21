@@ -4,7 +4,7 @@ import ServicesReveal from "./ServicesReveal";
 
 export default function ServicesHero() {
   return (
-    <section className="relative flex min-h-105 items-center justify-center overflow-hidden bg-white px-6 md:py-20 pt-20 text-left md:min-h-130 md:text-center">
+    <section className="relative flex min-h-105 items-center justify-center overflow-hidden bg-white px-6 md:py-30 pt-20 pb-10 text-left md:min-h-130 md:text-center">
       {/* Clean subtle background */}
       <div className="pointer-events-none absolute inset-0 bg-white" />
 

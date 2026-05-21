@@ -5,6 +5,7 @@ import { SectionReveal } from "../common/SectionReveal";
 import { motion } from "framer-motion";
 import { fadeUp, fadeIn } from "../common/variants";
 import Link from "next/link";
+import Image from "next/image";
 
 const quickLinks = [
   { name: "About Us", href: "/about" },
@@ -57,15 +58,15 @@ export default function Footer() {
         <SectionReveal>
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-12 pb-16 border-b border-white/10">
             <motion.div variants={fadeUp} custom={0} className="lg:col-span-4">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 bg-secondary flex items-center justify-center">
-                  <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5">
-                    <path d="M3 9.5L12 3l9 6.5V21H3V9.5z" />
-                  </svg>
-                </div>
-                <span className="text-white font-black text-xl tracking-widest uppercase">
-                  One States Hospitality
-                </span>
+              <div className="flex items-center gap-3 mb-6 w-50">
+                <Image
+                  src="/one-states-logo-light.png"
+                  alt="One States Logo"
+                  width={1000}
+                  height={500}
+                  className="w-full h-full"
+                  loading="lazy"
+                />
               </div>
 
               <p className="text-white/40 text-sm leading-relaxed mb-8 max-w-xs">

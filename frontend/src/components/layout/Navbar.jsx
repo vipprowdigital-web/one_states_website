@@ -73,14 +73,18 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className={`w-30 text-xl tracking-wider cursor-pointer font-extrabold transition-colors duration-300 ${
+          className={`sm:w-40 w-38 text-xl tracking-wider cursor-pointer font-extrabold transition-colors duration-300 ${
             isScrolled ? "text-white" : "text-primary"
           }`}
         >
           <Image
             width={1000}
             height={500}
-            src="/one-states-logo.png"
+            src={
+              isScrolled
+                ? "/one-states-logo-light.png"
+                : "/one-states-logo-dark.png"
+            }
             alt="One States Logo"
             className="w-full h-full"
           />

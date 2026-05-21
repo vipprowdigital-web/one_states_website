@@ -59,6 +59,8 @@ export default function BlogGrid() {
     ? filtered.filter((blog) => blog._id !== featuredBlog._id)
     : filtered;
 
+  // console.log("Normal Blogs: ", normalBlogs);
+
   if (loading) {
     return (
       <section className="px-6 py-20 text-center">
@@ -95,9 +97,9 @@ export default function BlogGrid() {
 
       <section className="mx-auto max-w-290 px-6 pb-25 pt-8">
         <div className="mb-12 flex flex-wrap gap-2.5 border-b border-[#f0f0f0] pb-8">
-          <p className="mr-3 shrink-0 text-[11px] font-bold uppercase tracking-[0.2em] text-[#aaa]">
+          {/* <p className="mr-3 shrink-0 text-[11px] font-bold uppercase tracking-[0.2em] text-[#aaa]">
             Filter:
-          </p>
+          </p> */}
 
           {categories.map((cat) => (
             <button

@@ -6,7 +6,7 @@ import { GridPattern } from "../common/Patterns";
 
 export default function Experience() {
   return (
-    <section className="relative bg-white py-20 md:py-28 overflow-hidden z-10">
+    <section className="relative bg-white py-10 md:py-28 overflow-hidden z-10">
       {/* Background visual texture */}
       <GridPattern opacity={0.02} />
 

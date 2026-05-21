@@ -17,13 +17,12 @@ export default function ServicesPage() {
         <ServicesHero />
         <ServicesGrid />
 
+        <ServicesBottomCTA />
         <FAQSection
           eyebrow="Service FAQ"
           title="Questions About Our Services"
           faqs={servicesFAQ}
         />
-
-        <ServicesBottomCTA />
       </main>
     </>
   );

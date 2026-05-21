@@ -2,10 +2,10 @@ import Reveal from "./Reveal";
 
 export default function AboutDesc() {
   return (
-    <section className="relative overflow-hidden bg-white pt-30 pb-10 text-left md:py-35 md:text-center">
+    <section className="relative overflow-hidden bg-white sm:pt-30 pt-10 pb-10 text-left md:py-35 md:text-center">
       <div className="md:max-w-5xl px-6 mx-auto">
         <Reveal delay={90}>
-          <h1 className="mb-7 text-3xl font-extrabold leading-tighter tracking-[-0.02em] text-primary sm:text-3xl md:text-5xl">
+          <h1 className="mb-7 text-3xl font-extrabold leading-tighter tracking-[-0.02em] text-primary md:text-5xl">
             Building Hospitality Growth Through
             <br />
             <span className="text-secondary not-italic">
@@ -44,7 +44,7 @@ export default function AboutDesc() {
         </Reveal>
 
         <Reveal delay={90}>
-          <h1 className="mb-7 mt-20 text-3xl font-extrabold leading-tighter tracking-[-0.02em] text-primary sm:text-3xl md:text-5xl">
+          <h1 className="mb-3 sm:mb-7 mt-10 sm:mt-20 text-3xl font-extrabold leading-tighter tracking-[-0.02em] text-primary sm:text-3xl md:text-5xl">
             Our <span className="text-secondary not-italic">Mission</span>
           </h1>
         </Reveal>
@@ -60,7 +60,7 @@ export default function AboutDesc() {
         </Reveal>
 
         <Reveal delay={90}>
-          <h1 className="mb-7 mt-20 text-3xl font-extrabold leading-tighter tracking-[-0.02em] text-primary sm:text-3xl md:text-5xl">
+          <h1 className="mb-3 sm:mb-7 mt-10 sm:mt-20 text-3xl font-extrabold leading-tighter tracking-[-0.02em] text-primary sm:text-3xl md:text-5xl">
             Our <span className="text-secondary not-italic">Vision</span>
           </h1>
         </Reveal>

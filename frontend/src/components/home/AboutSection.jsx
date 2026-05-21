@@ -32,6 +32,7 @@ export default function AboutSection() {
                 height={100}
                 alt="Luxury Hotel Lobby Architecture representing Premium Hospitality Growth"
                 className="w-full h-full object-cover grayscale-20 contrast-110 group-hover:scale-105 transition-transform duration-700"
+                loading="lazy"
               />
             </motion.div>
           </div>

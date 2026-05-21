@@ -1,8 +1,6 @@
 import { Button } from "~/components/ui/button";
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
-import belleza_favicon from "@/welcome/belleza_favicon.svg";
-import belleza_logo from "@/welcome/belleza_logo.svg";
 import { useNavigate } from "react-router";
 
 export function Welcome() {
