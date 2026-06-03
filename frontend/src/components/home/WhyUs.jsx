@@ -30,7 +30,7 @@ const PILLARS = [
 
 export default function WhyUs() {
   return (
-    <section className="relative bg-primary py-20 md:py-28 overflow-hidden z-10 text-white">
+    <section className="relative bg-primary py-10 md:py-28 overflow-hidden z-10 text-white">
       {/* Background structural grid pattern */}
       <GridPattern opacity={0.03} />
 
@@ -54,19 +54,20 @@ export default function WhyUs() {
                 height={400}
                 alt="Modern commercial corporate tower reflecting elite market execution"
                 className="w-full h-full object-cover grayscale opacity-80 group-hover:scale-105 group-hover:grayscale-0 transition-all duration-700 ease-out"
+                loading="lazy"
               />
 
               {/* Deep gradient overlay to blend copy readability cleanly */}
               <div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent mix-blend-multiply" />
 
               {/* ─── 22+ YEARS LEADERSHIP FEATURE CARD ─── */}
-              <div className="absolute bottom-0 left-0 right-0 p-8 bg-linear-to-t from-primary via-primary/95 to-primary/80 backdrop-blur-md border-t border-white/10">
+              <div className="absolute bottom-0 left-0 right-0 sm:p-8 p-4 bg-linear-to-t from-primary via-primary/95 to-primary/80 backdrop-blur-md border-t border-white/10">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-secondary/10 rounded-xl text-secondary border border-secondary/20 shrink-0">
                     <Award size={28} strokeWidth={1.5} />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-black text-white tracking-tight mb-2">
+                    <h3 className="text-lg sm:text-2xl font-black text-white tracking-tight mb-2">
                       22+ Years of Leadership Experience
                     </h3>
                     <p className="text-white/60 text-sm leading-relaxed">

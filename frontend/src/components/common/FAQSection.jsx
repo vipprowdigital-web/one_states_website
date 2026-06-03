@@ -16,7 +16,7 @@ export default function FAQSection({
   if (!faqs || faqs.length === 0) return null;
 
   return (
-    <section className="relative overflow-hidden bg-white px-6 py-16 md:py-24">
+    <section className="relative overflow-hidden bg-white px-6 py-10 md:pt-20">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 opacity-60"

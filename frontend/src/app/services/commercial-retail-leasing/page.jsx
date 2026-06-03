@@ -1,4 +1,5 @@
 import ServiceDetailTemplate from "@/components/services/ServiceDetailTemplate";
+import { commericalServices } from "@/seed/servicesData";
 
 export default function CommercialRetailLeasingPage() {
   return (
@@ -6,15 +7,19 @@ export default function CommercialRetailLeasingPage() {
       reverse={true}
       eyebrow="Smart Leasing Solutions"
       title="Commercial Retail Leasing"
-      description="We provide retail leasing solutions for commercial spaces by connecting property owners with suitable brands and financial institutions."
+      description="We help brands identify strategic retail opportunities that align with their business goals, customer reach, operational requirements and long-term expansion plans."
       image="/images/services/commercial-retail-leasing.jpg"
-      overviewTitle="Right brands for the right commercial spaces"
-      overview="Our commercial retail leasing service helps property owners unlock better value from their spaces by identifying suitable tenants, evaluating location potential, and connecting spaces with retail brands, NBFCs, and service-led businesses."
+      overviewTitle="Strategic Commercial Leasing Solutions for Retail Brands & Business Expansion"
+      overview="OneStates Hospitality provides commercial retail leasing solutions for retail brands, NBFCs, developers and businesses looking to expand through the right commercial spaces and high-potential locations. 
+From high-street retail spaces to commercial developments and mixed-use projects, we support businesses with location strategy, leasing advisory and market-focused expansion solutions.
+"
       highlights={[
         "Retail Brands",
         "NBFCs",
-        "Commercial Spaces",
-        "High-street & Mall Locations",
+        "Franchise Businesses",
+        "Commercial Developers",
+        "Lifestyle & Fashion Brands",
+        "Consumer-Focused Businesses",
       ]}
       processPoints={[
         "Review the commercial space, access, frontage and catchment quality.",
@@ -23,7 +28,10 @@ export default function CommercialRetailLeasingPage() {
         "Coordinate tenant discussions and site evaluation.",
         "Support closure with practical leasing terms and documentation flow.",
       ]}
-      ctaTitle="Want to lease your commercial space faster?"
+      ctaTitle="Expand Your Business with the Right Commercial Space"
+      services={commericalServices}
+      serviceHeading="Our Commercial Retail Leasing Services"
+      ctaDesc="Whether you are a retail brand, NBFC or expanding business, OneStates Hospitality helps you identify strategic commercial spaces designed for visibility, growth and long-term success."
     />
   );
 }

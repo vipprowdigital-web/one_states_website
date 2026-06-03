@@ -66,10 +66,14 @@ export default function PrivacyPolicyPage() {
     );
   }
 
+  // Detect whether the content is HTML or plain text
+  const rawContent = data.content || data.description || "";
+  const isHtml = /<[a-z][\s\S]*>/i.test(rawContent);
+
   return (
-    <main className="min-h-screen bg-white font-[Raleway] text-[#232627]">
+    <main className="min-h-screen bg-white text-[#232627]">
       {/* Header */}
-      <section className="relative overflow-hidden bg-white px-6 pb-16 pt-20 text-left md:text-center">
+      <section className="relative overflow-hidden bg-white px-6 sm:pb-16 pt-20 pb-10 text-left md:text-center">
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
@@ -80,7 +84,7 @@ export default function PrivacyPolicyPage() {
           }}
         />
 
-        <div className="relative mx-auto max-w-5xl">
+        <div className="relative mx-auto max-w-5xl pt-10 md:pt-20">
           <p className="mb-4 inline-flex items-center gap-3 text-[11px] font-extrabold uppercase tracking-[0.3em] text-[#ee7124]">
             <span className="block h-px w-6 bg-[#ee7124]" />
             Legal
@@ -107,74 +111,99 @@ export default function PrivacyPolicyPage() {
       <div className="h-px w-full bg-[#ebebeb]" />
 
       {/* Content */}
-      <section className="px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-3xl">
-          <article
-            className="
-              max-w-none font-[Raleway] text-base font-medium leading-8 text-[#232627]/70 md:text-lg
+      <section className="px-6 pb-10 md:py-10">
+        <div className="mx-auto max-w-5xl">
+          {isHtml ? (
+            // HTML content: rendered via dangerouslySetInnerHTML with full styling
+            <article
+              style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
+              className="
+                w-full max-w-none overflow-hidden wrap-break-word font-[Raleway] text-base
+                font-medium leading-8 text-[#232627]/70 md:text-lg
 
-              [&_*]:not-italic
-              [&_p]:mb-5
-              [&_p]:font-medium
-              [&_p]:leading-8
-              [&_p]:text-[#232627]/70
+                [&_p]:mb-5
+                [&_p]:font-medium
+                [&_p]:leading-8
+                [&_p]:text-[#232627]/70
 
-              [&_h1]:mb-5
-              [&_h1]:mt-10
-              [&_h1]:text-4xl
-              [&_h1]:font-extrabold
-              [&_h1]:leading-tight
-              [&_h1]:tracking-[-0.02em]
-              [&_h1]:text-[#232627]
+                [&_h1]:mb-5
+                [&_h1]:mt-10
+                [&_h1]:text-4xl
+                [&_h1]:font-extrabold
+                [&_h1]:leading-tight
+                [&_h1]:tracking-[-0.02em]
+                [&_h1]:text-[#232627]
 
-              [&_h2]:mb-4
-              [&_h2]:mt-10
-              [&_h2]:text-3xl
-              [&_h2]:font-extrabold
-              [&_h2]:leading-tight
-              [&_h2]:tracking-[-0.02em]
-              [&_h2]:text-[#232627]
+                [&_h2]:mb-4
+                [&_h2]:mt-10
+                [&_h2]:text-3xl
+                [&_h2]:font-extrabold
+                [&_h2]:leading-tight
+                [&_h2]:tracking-[-0.02em]
+                [&_h2]:text-[#232627]
 
-              [&_h3]:mb-3
-              [&_h3]:mt-8
-              [&_h3]:text-2xl
-              [&_h3]:font-extrabold
-              [&_h3]:leading-tight
-              [&_h3]:text-[#232627]
+                [&_h3]:mb-3
+                [&_h3]:mt-8
+                [&_h3]:text-2xl
+                [&_h3]:font-extrabold
+                [&_h3]:leading-tight
+                [&_h3]:text-[#232627]
 
-              [&_ul]:my-5
-              [&_ul]:list-disc
-              [&_ul]:pl-6
+                [&_ul]:my-5
+                [&_ul]:list-disc
+                [&_ul]:pl-6
 
-              [&_ol]:my-5
-              [&_ol]:list-decimal
-              [&_ol]:pl-6
+                [&_ol]:my-5
+                [&_ol]:list-decimal
+                [&_ol]:pl-6
 
-              [&_li]:mb-2
-              [&_li]:font-medium
-              [&_li]:leading-8
-              [&_li]:text-[#232627]/70
+                [&_li]:mb-2
+                [&_li]:font-medium
+                [&_li]:leading-8
+                [&_li]:text-[#232627]/70
 
-              [&_strong]:font-extrabold
-              [&_strong]:text-[#232627]
+                [&_strong]:font-extrabold
+                [&_strong]:text-[#232627]
 
-              [&_a]:font-bold
-              [&_a]:text-[#ee7124]
-              [&_a]:no-underline
-              hover:[&_a]:underline
+                [&_a]:font-bold
+                [&_a]:text-[#ee7124]
+                [&_a]:no-underline
+                hover:[&_a]:underline
 
-              [&_blockquote]:border-l-4
-              [&_blockquote]:border-[#ee7124]
-              [&_blockquote]:pl-5
-              [&_blockquote]:font-medium
-              [&_blockquote]:text-[#232627]/60
+                [&_blockquote]:border-l-4
+                [&_blockquote]:border-[#ee7124]
+                [&_blockquote]:pl-5
+                [&_blockquote]:font-medium
+                [&_blockquote]:text-[#232627]/60
 
-              [&_img]:rounded-xl
-            "
-            dangerouslySetInnerHTML={{
-              __html: data.content || data.description || "",
-            }}
-          />
+                [&_img]:max-w-full
+                [&_img]:h-auto
+                [&_img]:rounded-xl
+
+                [&_table]:w-full
+                [&_table]:block
+                [&_table]:overflow-x-auto
+
+                [&_pre]:overflow-x-auto
+                [&_pre]:whitespace-pre-wrap
+                [&_pre]:wrap-break-word
+
+                [&_code]:wrap-break-word
+              "
+              dangerouslySetInnerHTML={{ __html: rawContent }}
+            />
+          ) : (
+            // Plain text content: preserve line breaks, wrap naturally
+            <p
+              style={{ overflowWrap: "anywhere", wordBreak: "break-word" }}
+              className="
+                w-full max-w-none whitespace-pre-wrap wrap-break-word font-[Raleway]
+                text-base font-medium leading-8 text-[#232627]/70 md:text-lg
+              "
+            >
+              {rawContent}
+            </p>
+          )}
         </div>
       </section>
     </main>

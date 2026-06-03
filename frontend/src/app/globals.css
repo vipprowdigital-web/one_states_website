@@ -58,6 +58,19 @@ body {
   font-family: Raleway, sans-serif;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 5px;
+}
+
 /* @import "tailwindcss";
 
 :root {

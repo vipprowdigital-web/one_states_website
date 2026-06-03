@@ -32,13 +32,13 @@ const itemVariants = {
 
 export default function Stats() {
   return (
-    <section className="w-full pb-16 bg-white flex justify-center items-center">
+    <section className="w-full pb-7 md:pb-16 bg-white flex justify-center items-center">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
-        className="w-11/12 md:w-3/4 grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12"
+        className="w-11/12 md:w-3/4 grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 lg:gap-12"
       >
         {STATS.map((s) => (
           <motion.div

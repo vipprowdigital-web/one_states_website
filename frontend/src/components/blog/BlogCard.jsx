@@ -1,6 +1,6 @@
-
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 function getCategoryName(category) {
@@ -26,10 +26,13 @@ export default function BlogCard({ blog }) {
       className="group flex h-full flex-col overflow-hidden rounded-[20px] border-[1.5px] border-[#e8e8e8] bg-white text-inherit no-underline shadow-[0_4px_16px_rgba(0,0,0,.05)] transition-all duration-300 hover:-translate-y-2 hover:border-[#ee7124]/40 hover:shadow-[0_28px_60px_rgba(0,0,0,.1)]"
     >
       <div className="relative aspect-video overflow-hidden bg-[#f2f2f2]">
-        <img
+        <Image
           src={blog.thumbnail || "/images/blog/default.jpg"}
           alt={blog.title}
+          width={1000}
+          height={500}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          loading="lazy"
         />
 
         <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-[0.15em] text-[#ee7124]">
@@ -51,9 +54,9 @@ export default function BlogCard({ blog }) {
             {formatDate(blog.createdAt)}
           </p>
 
-          <p className="text-[11px] font-medium text-[#aaa]">
+          {/* <p className="text-[11px] font-medium text-[#aaa]">
             {blog.read_time || "5 min"}
-          </p>
+          </p> */}
         </div>
       </div>
     </Link>

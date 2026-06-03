@@ -5,7 +5,7 @@ import Reveal from "./Reveal";
 export default function AboutStory() {
   return (
     <section className="bg-white px-6 py-[100px]">
-      <div className="mb-16 md:text-center">
+      <div className="md:mb-16 mb-7 md:text-center">
         <Reveal>
           <p className="mb-5 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.32em] text-[var(--secondary)] md:text-sm">
             <span className="block h-px w-8 bg-[var(--secondary)]" />
@@ -26,20 +26,25 @@ export default function AboutStory() {
       <div className="story-grid mx-auto grid max-w-[960px] grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-16">
         <Reveal>
           <p className="mb-5 text-base font-medium leading-8 text-[var(--primary)]/65">
-           Our focus is to create value-driven collaborations across hospitality, commercial retail and warehousing sectors through trust, execution and long-term vision. 
+            Our focus is to create value-driven collaborations across
+            hospitality, commercial retail and warehousing sectors through
+            trust, execution and long-term vision.
           </p>
 
           <p className="text-base font-medium leading-8 text-[var(--primary)]/65">
-        With leadership experience across organizations like PepsiCo, Marico, Himalaya and Hindustan Unilever, we bring a strong understanding of business expansion, partnerships, negotiations and market strategy. 
+            With leadership experience across organizations like PepsiCo,
+            Marico, Himalaya and Hindustan Unilever, we bring a strong
+            understanding of business expansion, partnerships, negotiations and
+            market strategy.
           </p>
         </Reveal>
 
         <Reveal delay={150}>
-          <div className="float-anim relative overflow-hidden rounded-[20px] bg-[var(--primary)] px-8 py-10 md:px-10 md:py-12">
+          <div className="float-anim relative overflow-hidden rounded-[20px] bg-primary px-8 py-10 md:px-10 md:py-12">
             <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(238,113,36,.25)_0%,transparent_55%)]" />
 
-            <p className="relative mb-4 text-[72px] font-extrabold leading-[0.8] text-[var(--secondary)]">
-              "
+            <p className="relative mb-4 text-[72px] font-extrabold leading-[0.8] text-secondary">
+              &quot;
             </p>
 
             <p className="relative text-lg font-bold leading-8 text-white md:text-xl">

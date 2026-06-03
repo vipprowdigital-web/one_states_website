@@ -8,9 +8,9 @@ export default function ServicesGrid() {
   return (
     <section
       id="services"
-      className="border-t border-[#ebebeb] bg-[#ffffff] px-6 py-[100px]"
+      className="border-t border-[#ebebeb] bg-[#ffffff] px-6 sm:py-25 py-10"
     >
-      <div className="mb-[72px] text-left md:text-center">
+      <div className="sm:mb-18 mb-10 text-left md:text-center">
         <ServicesReveal>
           <p className="mb-5 inline-flex items-center justify-start gap-3 text-xs font-bold uppercase tracking-[0.32em] text-[#ee7124] md:justify-center md:text-sm">
             <span className="block h-px w-8 bg-[#ee7124]" />
@@ -23,9 +23,7 @@ export default function ServicesGrid() {
           <h2 className="text-3xl font-extrabold leading-tight tracking-[-0.02em] text-[#232627] md:text-5xl">
             Comprehensive Solutions
             <br />
-            <span className="not-italic text-[#ee7124]">
-              Tailored for You
-            </span>
+            <span className="not-italic text-[#ee7124]">Tailored for You</span>
           </h2>
         </ServicesReveal>
 
@@ -39,16 +37,10 @@ export default function ServicesGrid() {
 
       <div className="srv-grid mx-auto max-w-[1140px]">
         {SERVICES.map((service, index) => (
-          <ServicesCard
-            key={service.number}
-            service={service}
-            index={index}
-          />
+          <ServicesCard key={service.number} service={service} index={index} />
         ))}
 
-        <ServicesReveal delay={SERVICES.length * 110}>
-        
-        </ServicesReveal>
+        <ServicesReveal delay={SERVICES.length * 110}></ServicesReveal>
       </div>
     </section>
   );

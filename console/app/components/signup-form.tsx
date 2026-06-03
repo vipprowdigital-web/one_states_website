@@ -12,7 +12,7 @@ import { Input } from "~/components/ui/input";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom"; // for redirect
 import { useAuth } from "~/hooks/useAuth";
-import belleza_logo from "@/welcome/vipprow.png";
+import one_states_logo from "@/welcome/one_states_logo.png";
 
 export function SignupForm({
   className,
@@ -175,9 +175,9 @@ export function SignupForm({
               </FieldDescription>
             </FieldGroup>
           </form>
-          <div className="relative hidden md:block bg-secondary dark:bg-secondary">
+          <div className="relative hidden md:block bg-white dark:bg-white">
             <img
-              src={belleza_logo}
+              src={one_states_logo}
               alt="Image"
               className="absolute inset-0 h-full w-full object-contain p-5"
             />

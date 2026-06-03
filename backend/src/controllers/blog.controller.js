@@ -109,6 +109,8 @@ export const getAllActiveBlogs = async (req, res) => {
 
     const total = countResult[0]?.total || 0;
 
+    // console.log("Blogs: ", blogs);
+
     res.status(200).json({
       success: true,
       data: blogs,
@@ -129,12 +131,12 @@ export const getBlogById = async (req, res) => {
   try {
     const { id } = req.params;
 
-const blog = await Blog.findOne({
-  $or: [
-    { _id: mongoose.Types.ObjectId.isValid(id) ? id : null },
-    { slug: id },
-  ],
-}).populate("category");
+    const blog = await Blog.findOne({
+      $or: [
+        { _id: mongoose.Types.ObjectId.isValid(id) ? id : null },
+        { slug: id },
+      ],
+    }).populate("category");
 
     if (!blog)
       return res
@@ -250,7 +252,7 @@ export const createBlog = async (req, res) => {
     if (req.files?.thumbnail?.[0]?.path) {
       const upload = await uploadToCloudinary(
         req.files.thumbnail[0].path,
-        "blog/thumbnails"
+        "blog/thumbnails",
       );
       thumbnailUrl = upload.secure_url;
       uploaded.thumbnail = upload.public_id;
@@ -329,7 +331,7 @@ export const updateBlog = async (req, res) => {
 
       const up = await uploadToCloudinary(
         req.files.thumbnail[0].path,
-        "blog/thumbnails"
+        "blog/thumbnails",
       );
       blog.thumbnail = up.secure_url;
     }

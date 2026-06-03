@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -21,15 +20,13 @@ export default function BlogGrid() {
   useEffect(() => {
     async function fetchBlogs() {
       try {
-        const res = await fetch(`${API_BASE}/api/v1/blog`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blog`, {
           cache: "no-store",
         });
 
         const data = await res.json();
 
-        const list = Array.isArray(data)
-          ? data
-          : data.blogs || data.data || [];
+        const list = Array.isArray(data) ? data : data.blogs || data.data || [];
 
         const activeBlogs = list.filter((blog) => blog.isActive !== false);
 
@@ -55,12 +52,14 @@ export default function BlogGrid() {
     activeCategory === "All"
       ? blogs
       : blogs.filter(
-          (blog) => getCategoryName(blog.category) === activeCategory
+          (blog) => getCategoryName(blog.category) === activeCategory,
         );
 
   const normalBlogs = featuredBlog
     ? filtered.filter((blog) => blog._id !== featuredBlog._id)
     : filtered;
+
+  // console.log("Normal Blogs: ", normalBlogs);
 
   if (loading) {
     return (
@@ -87,7 +86,7 @@ export default function BlogGrid() {
   return (
     <>
       {featuredBlog && activeCategory === "All" && (
-        <section className="mx-auto max-w-[1160px] px-6 py-16 md:py-20">
+        <section className="mx-auto max-w-290 px-6 py-16 md:py-20">
           <p className="mb-7 text-xs font-bold uppercase tracking-[0.25em] text-[#ee7124]">
             Featured Article
           </p>
@@ -96,17 +95,17 @@ export default function BlogGrid() {
         </section>
       )}
 
-      <section className="mx-auto max-w-[1160px] px-6 pb-[100px] pt-8">
+      <section className="mx-auto max-w-290 px-6 pb-25 pt-8">
         <div className="mb-12 flex flex-wrap gap-2.5 border-b border-[#f0f0f0] pb-8">
-          <p className="mr-3 shrink-0 text-[11px] font-bold uppercase tracking-[0.2em] text-[#aaa]">
+          {/* <p className="mr-3 shrink-0 text-[11px] font-bold uppercase tracking-[0.2em] text-[#aaa]">
             Filter:
-          </p>
+          </p> */}
 
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`rounded-full border-[1.5px] px-[18px] py-2 text-xs font-bold transition-all duration-200 ${
+              className={`rounded-full border-[1.5px] px-4.5 py-2 text-xs font-bold transition-all duration-200 ${
                 activeCategory === cat
                   ? "border-[#232627] bg-[#232627] text-white"
                   : "border-[#e0e0e0] bg-transparent text-[#555] hover:border-[#ee7124] hover:text-[#ee7124]"

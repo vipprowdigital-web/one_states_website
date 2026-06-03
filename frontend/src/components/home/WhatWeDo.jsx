@@ -45,12 +45,15 @@ export default function WhatWeDo() {
   const [active, setActive] = useState(0);
 
   return (
-    <section className="relative bg-white py-28 overflow-hidden" id="services">
+    <section
+      className="relative bg-white py-10 md:py-28 overflow-hidden"
+      id="services"
+    >
       <DiagPattern />
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <SectionReveal>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-20">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-5 md:mb-20">
             <div>
               <motion.div
                 variants={fadeIn}
@@ -97,9 +100,9 @@ export default function WhatWeDo() {
                     active === i ? "border-b-secondary" : ""
                   }`}
                 >
-                  <div className="flex items-start gap-6">
+                  <div className="flex items-start gap-3 sm:gap-6">
                     <span
-                      className={`font-black text-5xl leading-none transition-colors duration-300 ${
+                      className={`font-black text-2xl sm:text-5xl leading-none transition-colors duration-300 ${
                         active === i ? "text-secondary" : "text-[#e5e5e5]"
                       }`}
                     >
@@ -169,7 +172,7 @@ export default function WhatWeDo() {
           <SectionReveal className="block">
             <motion.div variants={fadeUp} custom={0.2} className="relative">
               {/* Main image */}
-              <div className="relative h-137.5 overflow-hidden">
+              <div className="relative h-120 md:h-137.5 overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={active}
@@ -183,6 +186,7 @@ export default function WhatWeDo() {
                         [
                           "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80",
                           "https://images.unsplash.com/photo-1560185127-6a7a5b4e32f2?w=700&q=80",
+                          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80",
                           "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80",
                           "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&q=80",
                         ][active]
@@ -221,7 +225,7 @@ export default function WhatWeDo() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.8 }}
-                className="absolute -top-5 -left-5 bg-primary px-5 py-2"
+                className="absolute -top-5 -left-3 sm:-left-5 bg-primary px-5 py-2"
               >
                 <p className="text-secondary font-black text-lg">4,200+</p>
                 <p className="text-white/50 text-xs font-bold tracking-widest uppercase">

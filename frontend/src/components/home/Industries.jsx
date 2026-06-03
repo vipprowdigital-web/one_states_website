@@ -60,7 +60,7 @@ const INDUSTRIES = [
 
 export default function Industries() {
   return (
-    <section className="relative bg-[#232627] py-28 overflow-hidden">
+    <section className="relative bg-[#232627] py-10 md:py-28 overflow-hidden">
       <GridPattern opacity={0.04} />
 
       {/* Large background text */}
@@ -70,7 +70,7 @@ export default function Industries() {
 
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <SectionReveal>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-7 md:mb-16">
             <div>
               <motion.div
                 variants={fadeIn}
@@ -143,7 +143,7 @@ export default function Industries() {
                     <p className="text-white/50 text-sm leading-relaxed mb-6 group-hover:text-white/80 transition-colors">
                       {ind.desc}
                     </p>
-                    <div className="flex items-center justify-between">
+                    {/* <div className="flex items-center justify-between">
                       <span className="text-[#ee7124] font-black text-sm tracking-wider group-hover:text-white transition-colors">
                         {ind.count}
                       </span>
@@ -161,7 +161,7 @@ export default function Industries() {
                           <path d="M7 17L17 7M17 7H7M17 7v10" />
                         </svg>
                       </motion.div>
-                    </div>
+                    </div> */}
                   </div>
                 </motion.div>
               );

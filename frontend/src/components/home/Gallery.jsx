@@ -133,7 +133,7 @@ export default function Gallery() {
     <>
       <Lightbox img={lightboxImg} onClose={() => setLightboxImg(null)} />
 
-      <section className="relative bg-white py-20 md:py-28 overflow-hidden border-t border-primary/10 select-none">
+      <section className="relative bg-white py-10 md:pt-20 overflow-hidden border-t border-primary/10 select-none">
         <GridPattern opacity={0.02} />
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
@@ -200,7 +200,7 @@ export default function Gallery() {
                 <motion.div
                   key={img._id}
                   onClick={() => setLightboxImg(img)}
-                  className="relative w-90 md:w-110 h-52 sm:h-64 md:h-80 rounded-3xl overflow-hidden group shadow-md border border-primary/5 bg-primary/5 shrink-0"
+                  className="relative w-85 md:w-110 h-52 sm:h-64 md:h-80 rounded-3xl overflow-hidden group shadow-md border border-primary/5 bg-primary/5 shrink-0"
                   whileTap={{ scale: 0.98 }}
                 >
                   {/* Standard img tag maps to cloud assets safely */}

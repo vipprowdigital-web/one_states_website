@@ -64,7 +64,7 @@ export default function Hero() {
                 animate="visible"
                 custom={i * 0.15 + 0.2}
               >
-                <h1 className="font-black text-3xl md:text-4xl lg:text-7xl text-primary leading-none tracking-tight">
+                <h1 className="font-black text-5xl lg:text-7xl text-primary leading-none tracking-tight">
                   {line.includes("STATES") ? (
                     <>
                       <span className="text-secondary">STATES</span>
@@ -202,8 +202,8 @@ export default function Hero() {
           {/* Arrow circle */}
           <motion.div
             animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute -top-5 -right-5 w-16 h-16 bg-secondary rounded-full flex items-center justify-center shadow-xl"
+            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            className="absolute top-5 sm:-top-5 -right-5 w-16 h-16 bg-secondary rounded-full flex items-center justify-center shadow-xl"
           >
             <svg
               viewBox="0 0 24 24"
@@ -219,21 +219,21 @@ export default function Hero() {
       </div>
 
       {/* Bottom scroll indicator */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 0.8 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-white/30 text-xs font-bold tracking-[0.3em] uppercase">
+        <span className="text-primary/30 text-xs font-bold tracking-[0.3em] uppercase">
           Scroll
         </span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-px h-8 bg-linear-to-b from-white/30 to-transparent"
+          className="w-px h-8 bg-linear-to-b from-primary/30 to-transparent"
         />
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 }
