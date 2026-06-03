@@ -7,7 +7,7 @@ export default function WarehouseLeasingPage() {
       eyebrow="Logistics & Distribution"
       title="Warehouse Leasing"
       description="We help businesses identify the right warehouse spaces based on operational requirements, connectivity, storage capacity and long-term expansion goals."
-      image="/images/services/warehouse-leasing.jpg"
+      image="/images/warehouse.png"
       overviewTitle="Strategic Warehouse & Industrial Space Solutions for Logistics and FMCG Businesses"
       overview="OneStates Hospitality provides warehouse leasing and industrial space solutions for 3PL logistics players, FMCG companies, distribution businesses and supply chain operations looking for scalable infrastructure and strategic locations. From logistics hubs to industrial warehousing and distribution centers, we support businesses with location strategy, leasing advisory and growth-focused warehouse solutions."
       highlights={[

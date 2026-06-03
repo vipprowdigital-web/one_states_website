@@ -94,11 +94,11 @@ export default function Experience() {
                 transition={{ duration: 0.6 }}
                 className="w-[85%] h-[85%] rounded-3xl overflow-hidden shadow-2xl border border-primary/10 relative z-10"
               >
-                {/* <img
-                  src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80"
+                <img
+                  src="/images/why.png"
                   alt="Premium Luxury Destination Resort Development Portfolio"
                   className="w-full h-full object-cover grayscale-[15%] contrast-[105%]"
-                /> */}
+                />
               </motion.div>
 
               {/* Overlapping Secondary Image Card */}
@@ -109,11 +109,11 @@ export default function Experience() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="absolute bottom-0 right-0 w-[55%] h-[50%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-20"
               >
-                {/* <img
+                <img
                   src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80"
                   alt="Corporate hospitality consulting negotiation meeting environment"
                   className="w-full h-full object-cover"
-                /> */}
+                />
               </motion.div>
             </div>
           </div>

@@ -111,9 +111,14 @@ export default function ContactForm() {
     name: "",
     email: "",
     phone: "",
+    projectType: "",
+    projectBudget: "",
+    projectStage: "",
+    city: "",
     message: "",
     services: [],
   });
+
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -178,7 +183,15 @@ export default function ContactForm() {
         type: "Services",
         // services: formData.services,
         services: formData.services.map((item) => item._id),
+
+        meta: {
+          projectType: formData.projectType,
+          projectBudget: formData.projectBudget,
+          projectStage: formData.projectStage,
+          city: formData.city,
+        },
       };
+      console.log("Contact Form Payload:", payload);
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_API_URL}/contact`,
         {
@@ -194,6 +207,10 @@ export default function ContactForm() {
           name: "",
           email: "",
           phone: "",
+          projectType: "",
+          projectBudget: "",
+          projectStage: "",
+          city: "",
           message: "",
           services: [],
         });
@@ -499,6 +516,50 @@ export default function ContactForm() {
                         value={formData.phone}
                         onChange={handleChange}
                         error={errors.phone}
+                        required
+                      />
+
+                      <FloatingInput
+                        label="Project Type"
+                        name="projectType"
+                        value={formData.projectType}
+                        onChange={handleChange}
+                        required
+                      />
+                    </motion.div>
+
+                    <motion.div
+                      variants={fadeUp}
+                      custom={0.2}
+                      className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8"
+                    >
+                      <FloatingInput
+                        label="Project Budget"
+                        name="projectBudget"
+                        value={formData.projectBudget}
+                        onChange={handleChange}
+                        required
+                      />
+
+                      <FloatingInput
+                        label="City"
+                        name="city"
+                        value={formData.city}
+                        onChange={handleChange}
+                        required
+                      />
+                    </motion.div>
+
+                    <motion.div
+                      variants={fadeUp}
+                      custom={0.2}
+                      className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8"
+                    >
+                      <FloatingInput
+                        label="Project Stage"
+                        name="projectStage"
+                        value={formData.projectStage}
+                        onChange={handleChange}
                         required
                       />
                     </motion.div>

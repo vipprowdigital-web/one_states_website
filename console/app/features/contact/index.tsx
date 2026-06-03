@@ -179,6 +179,30 @@ export default function ContactPage() {
     },
 
     {
+      accessorKey: "projectType",
+      header: "Project Type",
+      cell: ({ row }) => row.original.meta?.projectType || "-",
+    },
+
+    {
+      accessorKey: "projectBudget",
+      header: "Budget",
+      cell: ({ row }) => row.original.meta?.projectBudget || "-",
+    },
+
+    {
+      accessorKey: "projectStage",
+      header: "Stage",
+      cell: ({ row }) => row.original.meta?.projectStage || "-",
+    },
+
+    {
+      accessorKey: "city",
+      header: "City",
+      cell: ({ row }) => row.original.meta?.city || "-",
+    },
+
+    {
       accessorKey: "services",
       header: "Services",
       cell: ({ row }) => {
