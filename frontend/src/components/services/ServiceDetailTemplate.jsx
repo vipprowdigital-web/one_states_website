@@ -23,7 +23,7 @@ export default function ServiceDetailTemplate({
     <main className="min-h-screen bg-white font-[Raleway] text-[#232627]">
       {/* Hero */}
       <section className="border-b border-[#ebebeb] bg-white px-6 py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-6xl mt-5 flex flex-col">
           <Link
             href="/services"
             className="mb-8 inline-block text-sm font-bold tracking-[0.08em] text-[#ee7124]"
@@ -31,8 +31,8 @@ export default function ServiceDetailTemplate({
             ← Back to Services
           </Link>
 
-          <p className="mb-5 inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.32em] text-[#ee7124] md:text-sm">
-            <span className="block h-px w-8 bg-[#ee7124]" />
+          <p className="inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.32em] text-[#ee7124] md:text-sm">
+            {/* <span className="block h-px w-8 bg-[#ee7124]" /> */}
             {eyebrow}
           </p>
 
