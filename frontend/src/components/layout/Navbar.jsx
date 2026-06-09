@@ -1,8 +1,5 @@
-
-
 "use client";
 
-import { useState, useEffect, useRef } from "react";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,9 +9,15 @@ import { ChevronDown } from "lucide-react";
 
 const serviceLinks = [
   { name: "Hotel Brand Tie-Ups", href: "/services/hotel-brand-tie-ups" },
-  { name: "Commercial Retail Leasing", href: "/services/commercial-retail-leasing" },
+  {
+    name: "Commercial Retail Leasing",
+    href: "/services/commercial-retail-leasing",
+  },
   { name: "Warehouse Solutions", href: "/services/warehouse-leasing" },
-  { name: "Large Asset Transaction Advisory", href: "/services/large-asset-transaction-advisory" },
+  {
+    name: "Large Asset Transaction Advisory",
+    href: "/services/large-asset-transaction-advisory",
+  },
   { name: "JV & Strategic Collaborations", href: "/services/jv-collaboration" },
 ];
 
@@ -162,7 +165,8 @@ export default function Navbar() {
         {/* Desktop Links */}
         <div className="hidden md:flex items-center space-x-8 font-medium">
           {navLinks.map((link) => {
-            const isActive = pathname === link.href || (link.hasDropdown && isServicesActive);
+            const isActive =
+              pathname === link.href || (link.hasDropdown && isServicesActive);
 
             if (link.hasDropdown) {
               return (
@@ -281,7 +285,9 @@ export default function Navbar() {
               }`}
             >
               {navLinks.map((link) => {
-                const isActive = pathname === link.href || (link.hasDropdown && isServicesActive);
+                const isActive =
+                  pathname === link.href ||
+                  (link.hasDropdown && isServicesActive);
 
                 if (link.hasDropdown) {
                   return (
@@ -385,7 +391,6 @@ export default function Navbar() {
     </nav>
   );
 }
-
 
 // "use client";
 
