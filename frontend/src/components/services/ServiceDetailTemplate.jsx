@@ -50,7 +50,7 @@ export default function ServiceDetailTemplate({
       <section className="px-6 py-16 md:py-20">
         <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-14">
           <div className={reverse ? "md:order-2" : "md:order-1"}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-[#f2f2f2] shadow-[0_20px_60px_rgba(0,0,0,.08)]">
+            <div className="relative aspect-4/3 overflow-hidden rounded-3xl bg-[#f2f2f2] shadow-[0_20px_60px_rgba(0,0,0,.08)]">
               <Image
                 src={image}
                 alt={title}
