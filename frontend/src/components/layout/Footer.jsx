@@ -37,14 +37,13 @@ const industries = [
 ];
 
 const CITIES = [
-  "Bengaluru",
-  "Mumbai",
+  "Gurgaon",
+  "Noida,",
   "Delhi NCR",
-  "Hyderabad",
-  "Pune",
-  "Chennai",
-  "Ahmedabad",
-  "Kolkata",
+  " Jaipur",
+  " Dehradun",
+  
+  
 ];
 
 export default function Footer() {

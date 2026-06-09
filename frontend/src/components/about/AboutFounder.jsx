@@ -26,7 +26,7 @@ export default function AboutFounder() {
         <Reveal className="img-reveal">
           <div className="relative aspect-3/4 overflow-hidden rounded-2xl bg-[#e8e8e8]">
             <Image
-              src="/images/owner.jpg"
+              src="/images/garg.jpeg"
               alt="Founder photo"
               fill
               className="object-cover object-center"
@@ -51,21 +51,24 @@ export default function AboutFounder() {
           </p>
 
           <h3 className="mb-6 text-3xl font-extrabold leading-tight tracking-[-0.01em] text-primary md:text-5xl">
-            Aryan Mehta
+            Aditya Kumar Garge
           </h3>
 
           <div className="mb-7 h-0.75 w-12 rounded bg-secondary" />
 
           <p className="mb-5 text-base font-medium leading-8 text-primary/65">
-            With over 20 years of experience spanning luxury hotel operations
-            and strategic advisory across South &amp; Southeast Asia, I founded
-            this consultancy with a singular vision — to bridge the gap between
-            operational excellence and business growth in hospitality.
+            With 22+ years of leadership experience across sales, marketing,
+            FMCG channel sales and hospitality consulting, Aditya Kumaar Garg
+            helps hospitality brands, hotel chains, developers and investors
+            scale through strategic partnerships, commercial leasing and
+            expansion planning.
           </p>
 
           <p className="mb-9 text-base font-medium leading-8 text-primary/65">
-            My philosophy: every property has a soul. Our job is to help it find
-            its voice — and amplify it.
+            Since 2018, he has worked as an independent consultant, supporting
+            F&B, fashion, footwear, jewellery, NBFC and PSU sector brands with
+            retail leasing, brand introductions, negotiations, project
+            feasibility and ROI-focused growth strategy.
           </p>
 
           <p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-primary/50">
@@ -74,12 +77,12 @@ export default function AboutFounder() {
 
           <div className="flex flex-wrap gap-3">
             {[
-              "Luxury Hospitality",
-              "Brand Strategy",
-              "Revenue Optimisation",
-              "Pre-opening Advisory",
-              "F&B Concepts",
-              "Investor Advisory",
+              "Hospitality Consulting",
+              "Commercial Retail Leasing",
+              "Brand Partnerships",
+              "Asset Transactions",
+              "Project Feasibility",
+              "Expansion Strategy",
             ].map((tag) => (
               <span
                 key={tag}

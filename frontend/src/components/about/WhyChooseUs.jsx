@@ -268,7 +268,7 @@ export default function WhyChooseUs() {
 
                 <div className="wcu-photo-inner absolute inset-0">
                   <Image
-                    src="/images/why-choose-us.jpg"
+                    src="/images/why.png"
                     alt="Our hospitality expertise"
                     fill
                     className="object-cover object-center"

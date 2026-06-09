@@ -5,15 +5,47 @@ import { slideLeft, fadeUp } from "../common/variants";
 import Image from "next/image";
 
 const CLIENTS = [
-  { name: "Godrej Properties", abbr: "GP" },
-  { name: "DLF Group", abbr: "DLF" },
-  { name: "Sobha Realty", abbr: "SR" },
-  { name: "Prestige Group", abbr: "PG" },
-  { name: "Lodha Group", abbr: "LG" },
-  { name: "Brigade Group", abbr: "BG" },
-  { name: "Mahindra Lifespace", abbr: "ML" },
-  { name: "Embassy Group", abbr: "EG" },
+    { name: "Atmosphere Group", abbr: "AG" },
+  { name: "Byke Hotels", abbr: "BH" },
+  { name: "Medalio, Mercure", abbr: "MM" },
+  { name: "Lords", abbr: "L" },
+  { name: "Tivoli", abbr: "T" },
+  { name: "Clark's Inn", abbr: "CI" },
+  { name: "ShriGo", abbr: "SG" },
+  { name: "Spree Hotels", abbr: "SH" },
+  { name: "Renest", abbr: "R" },
+  { name: "Pandora", abbr: "P" },
+  { name: "SaltStayz", abbr: "SS" },
+  { name: "Oyo Sunday", abbr: "OS" },
+  { name: "Clark's Inn", abbr: "CI" },
+  { name: "The Park", abbr: "TP" },
+  { name: "Fern Hotel", abbr: "FH" },
+  { name: "Country Inn Hotel & Suites", abbr: "CIHS" },
+  { name: "ITC", abbr: "ITC" },
+  { name: "Radisson", abbr: "R" },
+  { name: "Hilton", abbr: "H" },
+  { name: "Taj", abbr: "T" },
+  { name: "Zolo Stays", abbr: "ZS" },
+  { name: "Olive Hospitality", abbr: "OH" },
+  { name: "Leisure Hotel", abbr: "LH" },
+  { name: "Justa", abbr: "J" },
+  { name: "Lemon Tree", abbr: "LT" },
+  { name: "Pride Hotel", abbr: "PH" },
+  { name: "Sarover Portico", abbr: "SP" },
+  { name: "Planet Hollywood", abbr: "PH" },
+  { name: "Tamara Leisure", abbr: "TL" },
+  { name: "Altruist Hotel", abbr: "AH" },
+  { name: "World Hotel", abbr: "WH" },
+  { name: "Royal Orchid", abbr: "RO" },
+  { name: "Holiday Inn", abbr: "HI" },
+  { name: "Cygnet", abbr: "C" },
+  { name: "Club Mahindra", abbr: "CM" },
+  { name: "VITS Kamat", abbr: "VK" },
+  { name: "Hosteller", abbr: "H" },
+  { name: "Ramada by Wyndham", abbr: "RW" },
+  { name: "Levelup", abbr: "LU" },
 ];
+
 
 export default function Clients() {
   const doubled = [...CLIENTS, ...CLIENTS];
@@ -51,7 +83,7 @@ export default function Clients() {
               className="text-primary font-black text-3xl md:text-5xl tracking-tight"
             >
               India&apos;s Leading{" "}
-              <span className="text-secondary">Real Estate Brands</span>
+              <span className="text-secondary"> Brands</span>
             </motion.h2>
           </div>
         </SectionReveal>
@@ -64,8 +96,8 @@ export default function Clients() {
 
           <motion.div
             className="flex gap-8 w-max"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 22, ease: "linear", repeat: Infinity }}
+            animate={{ x: ["0%", "-40%"] }}
+            transition={{ duration: 34, ease: "linear", repeat: Infinity }}
           >
             {doubled.map((c, i) => (
               <motion.div

@@ -20,6 +20,7 @@ import { useEffect } from "react";
 import Loader from "@/components/common/Loader";
 import { useAppConfigStore } from "@/store/useAppConfigStore";
 import Gallery from "@/components/home/Gallery";
+import YoutubeSection from "@/components/home/YoutubeSection";
 
 export default function Home() {
   const config = useAppConfigStore((state) => state.config);
@@ -47,6 +48,7 @@ export default function Home() {
       <WhatWeDo />
       <Stats />
       <WhyUs />
+      <YoutubeSection />
       <Experience />
       <Clients />
       <Gallery />

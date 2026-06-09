@@ -7,7 +7,7 @@ export default function JVCollaborationPage() {
       eyebrow="Joint Venture Structuring"
       title="JV / Collaboration"
       description="We specialize in creating structured partnerships across hospitality, housing, warehousing and commercial development sectors by connecting the right stakeholders, opportunities and business models."
-      image="/images/services/jv-collaboration.jpg"
+      image="/images/jv.png"
       overviewTitle="Strategic Joint Ventures & Business Collaboration Solutions
 "
       overview="OneStates Hospitality helps developers, investors, hospitality brands and business groups build strong joint ventures and strategic collaborations for large-scale projects and long-term business growth. Our approach focuses on relationship-driven growth, strategic alignment and value creation for all parties involved.

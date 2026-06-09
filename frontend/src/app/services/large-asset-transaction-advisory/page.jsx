@@ -8,7 +8,7 @@ export default function LargeAssetTransactionAdvisoryPage() {
       eyebrow="High-Value Real Estate"
       title="Large Asset Transaction Advisory"
       description="Our expertise includes hospitality assets, commercial properties, land acquisitions and investment-focused opportunities designed for long-term business value and growth."
-      image="/images/services/large-asset-transaction-advisory.jpg"
+      image="/images/leasing.png"
       overviewTitle="Strategic Advisory for Hospitality, Commercial & High-Value Asset Transactions"
       overview="OneStates Hospitality provides professional advisory services for large asset transactions across hospitality, commercial and investment sectors. We work with hotel owners, developers, investors and business groups to identify strategic opportunities and facilitate structured asset transactions. With a relationship-driven and market-focused approach, we help clients navigate complex transactions with clarity, strategic insight and professional support.
 "

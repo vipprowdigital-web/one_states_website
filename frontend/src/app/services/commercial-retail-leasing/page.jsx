@@ -8,7 +8,7 @@ export default function CommercialRetailLeasingPage() {
       eyebrow="Smart Leasing Solutions"
       title="Commercial Retail Leasing"
       description="We help brands identify strategic retail opportunities that align with their business goals, customer reach, operational requirements and long-term expansion plans."
-      image="/images/services/commercial-retail-leasing.jpg"
+      image="/images/comm.png"
       overviewTitle="Strategic Commercial Leasing Solutions for Retail Brands & Business Expansion"
       overview="OneStates Hospitality provides commercial retail leasing solutions for retail brands, NBFCs, developers and businesses looking to expand through the right commercial spaces and high-potential locations. 
 From high-street retail spaces to commercial developments and mixed-use projects, we support businesses with location strategy, leasing advisory and market-focused expansion solutions.

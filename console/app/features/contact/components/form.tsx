@@ -125,7 +125,7 @@ export default function ContactForm({
         loading: "Sending reply...",
         success: "Reply sent successfully",
         error: "Failed to send reply",
-      }
+      },
     );
 
     setResponseMessage("");
@@ -191,7 +191,7 @@ export default function ContactForm({
                   in_progress: "bg-amber-500",
                   answered: "bg-green-600",
                   closed: "bg-gray-500",
-                }[values.status]
+                }[values.status],
               )}
             >
               {values.status}
@@ -276,6 +276,38 @@ export default function ContactForm({
                   </div>
                 </div>
               </div>
+              {/* Project Details */}
+              {isEdit && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 rounded-lg border p-4">
+                  <div>
+                    <Label>Project Type</Label>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {c?.meta?.projectType || "-"}
+                    </p>
+                  </div>
+
+                  <div>
+                    <Label>Project Budget</Label>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {c?.meta?.projectBudget || "-"}
+                    </p>
+                  </div>
+
+                  <div>
+                    <Label>Project Stage</Label>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {c?.meta?.projectStage || "-"}
+                    </p>
+                  </div>
+
+                  <div>
+                    <Label>City</Label>
+                    <p className="mt-1 text-sm text-muted-foreground">
+                      {c?.meta?.city || "-"}
+                    </p>
+                  </div>
+                </div>
+              )}
 
               {/* Message */}
               <div className="space-y-2">
