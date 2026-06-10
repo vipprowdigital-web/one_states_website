@@ -162,7 +162,7 @@ export default function Hero() {
               <div
                 className="w-full h-[130%] bg-cover bg-center"
                 style={{
-                  backgroundImage: `url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80')`,
+                  backgroundImage: `url('/images/Why.png')`,
                   filter: "brightness(0.85)",
                 }}
               />

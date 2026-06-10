@@ -289,7 +289,7 @@ export default function WhyChooseUs() {
                 </div>
 
                 <div className="absolute -right-3.5 top-5 z-3 rounded-xl bg-[#ee7124] px-4.5 py-2.5 text-white shadow-[0_8px_24px_rgba(238,113,36,.35)]">
-                  <p className="m-0 text-xl font-extrabold leading-none">15+</p>
+                  <p className="m-0 text-xl font-extrabold leading-none">22+</p>
                   <p className="m-0 mt-1 text-[10px] uppercase tracking-[0.12em] opacity-90">
                     Years
                   </p>

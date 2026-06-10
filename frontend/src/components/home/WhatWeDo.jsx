@@ -19,13 +19,13 @@ const SERVICES = [
     num: "02",
     title: "Commercial Retail Leasing",
     desc: "Strategic leasing solutions for - Retail Brands, NBFCs, Commercial Developers, High-Street & Retail Spaces",
-    link: "/services/commercial-retail-leasing",
+    link: "/images/comm.png",
   },
   {
     num: "03",
     title: "Warehouse Solutions",
     desc: "Warehouse and industrial space solutions for, 3PL Logistics Players, FMCG Companies, Distribution & Supply Chain Businesses.",
-    link: "/services/warehouse-leasing",
+    link: "/images/warehouse.png",
   },
   {
     num: "04",
@@ -184,11 +184,11 @@ export default function WhatWeDo() {
                     style={{
                       backgroundImage: `url('${
                         [
-                          "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80",
-                          "https://images.unsplash.com/photo-1560185127-6a7a5b4e32f2?w=700&q=80",
-                          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80",
-                          "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80",
-                          "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=700&q=80",
+                          "/images/comm.png",
+                          "/images/warehouse.png",
+                          "/images/hotel.png",
+                          "/images/jv.png",
+                          "/images/leasing.png",
                         ][active]
                       }')`,
                     }}

@@ -1,5 +1,5 @@
 export const stats = [
-  { n: "15+", l: "Years of Excellence" },
+  { n: "22+", l: "Years of Excellence" },
   { n: "500+", l: "Projects Delivered" },
   { n: "98%", l: "Client Satisfaction" },
   { n: "40+", l: "Global Partners" },
