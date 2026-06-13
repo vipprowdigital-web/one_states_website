@@ -1,69 +1,97 @@
+"use client";
+
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { SectionReveal } from "../common/SectionReveal";
-import { DiagPattern } from "../common/Patterns";
 import { slideLeft, fadeUp } from "../common/variants";
 import Image from "next/image";
 
+/*
+  ✅ Uses logos downloaded via download-logos.mjs script
+  Files live in: /public/images/clients/
+
+  If a file is missing or fails to load, the brand's
+  initials (abbr) box shows automatically as fallback.
+*/
+
 const CLIENTS = [
-    { name: "Atmosphere Group", abbr: "AG" },
-  { name: "Byke Hotels", abbr: "BH" },
-  { name: "Medalio, Mercure", abbr: "MM" },
-  { name: "Lords", abbr: "L" },
-  { name: "Tivoli", abbr: "T" },
-  { name: "Clark's Inn", abbr: "CI" },
-  { name: "ShriGo", abbr: "SG" },
-  { name: "Spree Hotels", abbr: "SH" },
-  { name: "Renest", abbr: "R" },
-  { name: "Pandora", abbr: "P" },
-  { name: "SaltStayz", abbr: "SS" },
-  { name: "Oyo Sunday", abbr: "OS" },
-  { name: "Clark's Inn", abbr: "CI" },
-  { name: "The Park", abbr: "TP" },
-  { name: "Fern Hotel", abbr: "FH" },
-  { name: "Country Inn Hotel & Suites", abbr: "CIHS" },
-  { name: "ITC", abbr: "ITC" },
-  { name: "Radisson", abbr: "R" },
-  { name: "Hilton", abbr: "H" },
-  { name: "Taj", abbr: "T" },
-  { name: "Zolo Stays", abbr: "ZS" },
-  { name: "Olive Hospitality", abbr: "OH" },
-  { name: "Leisure Hotel", abbr: "LH" },
-  { name: "Justa", abbr: "J" },
-  { name: "Lemon Tree", abbr: "LT" },
-  { name: "Pride Hotel", abbr: "PH" },
-  { name: "Sarover Portico", abbr: "SP" },
-  { name: "Planet Hollywood", abbr: "PH" },
-  { name: "Tamara Leisure", abbr: "TL" },
-  { name: "Altruist Hotel", abbr: "AH" },
-  { name: "World Hotel", abbr: "WH" },
-  { name: "Royal Orchid", abbr: "RO" },
-  { name: "Holiday Inn", abbr: "HI" },
-  { name: "Cygnet", abbr: "C" },
-  { name: "Club Mahindra", abbr: "CM" },
-  { name: "VITS Kamat", abbr: "VK" },
-  { name: "Hosteller", abbr: "H" },
-  { name: "Ramada by Wyndham", abbr: "RW" },
-  { name: "Levelup", abbr: "LU" },
+  { name: "Atmosphere Group", abbr: "AG", logo: "atmosphere.png" },
+  
+  { name: "Lords", abbr: "L", logo: "lords.png" },
+  { name: "Tivoli", abbr: "T", logo: "tivoli.png" },
+  { name: "Clark's Inn", abbr: "CI", logo: "clarks-inn.png" },
+  { name: "SaltStayz", abbr: "SS", logo: "saltstayz.png" },
+  { name: "Oyo Sunday", abbr: "OS", logo: "oyo-sunday.png" },
+  { name: "The Park", abbr: "TP", logo: "the-park.png" },
+  { name: "Fern Hotel", abbr: "FH", logo: "fern-hotel.png" },
+  { name: "Country Inn Hotel & Suites", abbr: "CIHS", logo: "country-inn.png" },
+  { name: "ITC", abbr: "ITC", logo: "itc.png" },
+  { name: "Radisson", abbr: "R", logo: "radisson.png" },
+  { name: "Hilton", abbr: "H", logo: "hilton.png" },
+  { name: "Taj", abbr: "T", logo: "taj.png" },
+
+  { name: "Justa", abbr: "J", logo: "justa.png" },
+  { name: "Lemon Tree", abbr: "LT", logo: "lemon-tree.png" },
+  { name: "Pride Hotel", abbr: "PH", logo: "pride-hotel.png" },
+  { name: "Sarover Portico", abbr: "SP", logo: "sarover-portico.png" },
+ 
+  { name: "World Hotel", abbr: "WH", logo: "world-hotel.png" },
+  { name: "Royal Orchid", abbr: "RO", logo: "royal-orchid.png" },
+  { name: "Holiday Inn", abbr: "HI", logo: "holiday-inn.png" },
+ 
+  { name: "Club Mahindra", abbr: "CM", logo: "club-mahindra.png" },
+  
+
+  { name: "Ramada by Wyndham", abbr: "RW", logo: "ramada.png" },
+  { name: "Levelup", abbr: "LU", logo: "levelup.png" },
 ];
 
+/* ── Single client card with logo + fallback ── */
+function ClientCard({ client }) {
+  const [imgError, setImgError] = useState(false);
+
+  return (
+    <motion.div
+      whileHover={{ scale: 1.05, borderColor: "#ee7124" }}
+      className="shrink-0 w-52 h-20 border-2 border-[#e5e5e5] bg-white shadow-sm rounded-xl flex items-center justify-center gap-3 px-6 my-2 cursor-pointer transition-all duration-300 group relative z-10"
+    >
+      {!imgError ? (
+        <>
+          {/* Real logo (from /public/images/clients/) */}
+          <div className="relative h-9 w-9 shrink-0">
+            <Image
+              src={`/images/clients/${client.logo}`}
+              alt={client.name}
+              fill
+              className="object-contain"
+              sizes="36px"
+              onError={() => setImgError(true)}
+            />
+          </div>
+          <span className="text-primary font-bold text-sm tracking-wide leading-tight">
+            {client.name}
+          </span>
+        </>
+      ) : (
+        <>
+          {/* Fallback — initials box */}
+          <div className="w-10 h-10 bg-primary text-white flex items-center justify-center font-black text-xs tracking-wider group-hover:bg-secondary transition-colors duration-300 rounded-lg shrink-0">
+            {client.abbr}
+          </div>
+          <span className="text-primary font-bold text-sm tracking-wide leading-tight">
+            {client.name}
+          </span>
+        </>
+      )}
+    </motion.div>
+  );
+}
 
 export default function Clients() {
   const doubled = [...CLIENTS, ...CLIENTS];
 
   return (
     <section className="relative py-10 md:pt-20 overflow-hidden border-b border-white">
-      {/* ─── BACKGROUND IMAGE ─── */}
-      {/* <Image
-        src="/images/clients.jpg"
-        fill 
-        alt="Client Real Estate Background Portfolio"
-        className="object-cover z-0"
-        priority 
-      /> */}
-
-      {/* Subtle overlay screen to blend background contrast and maintain text legibility */}
-      {/* <div className="absolute inset-0 bg-white/30 z-0 pointer-events-none" /> */}
-
       <div className="relative z-10">
         <SectionReveal>
           <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-12 flex md:flex-row flex-col md:items-center md:gap-6 gap-3">
@@ -90,7 +118,6 @@ export default function Clients() {
 
         {/* Marquee Wrapper Window */}
         <div className="relative w-full overflow-hidden">
-          {/* Transparent left / right edge fading masks */}
           <div className="absolute left-0 top-0 bottom-0 w-16 md:w-32 bg-linear-to-r from-white to-transparent z-20 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-16 md:w-32 bg-linear-to-l from-white to-transparent z-20 pointer-events-none" />
 
@@ -100,19 +127,7 @@ export default function Clients() {
             transition={{ duration: 34, ease: "linear", repeat: Infinity }}
           >
             {doubled.map((c, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.05, borderColor: "#ee7124" }}
-                // Added explicit 'bg-white shadow-md' to isolate the individual cards from the backdrop image
-                className="shrink-0 w-52 h-20 border-2 border-[#e5e5e5] bg-white shadow-sm rounded-xl flex items-center justify-center gap-3 px-6 my-2 cursor-pointer transition-all duration-300 group relative z-10"
-              >
-                <div className="w-10 h-10 bg-primary text-white flex items-center justify-center font-black text-xs tracking-wider group-hover:bg-secondary transition-colors duration-300 rounded-lg">
-                  {c.abbr}
-                </div>
-                <span className="text-primary font-bold text-sm tracking-wide">
-                  {c.name}
-                </span>
-              </motion.div>
+              <ClientCard key={i} client={c} />
             ))}
           </motion.div>
         </div>

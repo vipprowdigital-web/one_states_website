@@ -34,7 +34,7 @@ export default function AboutFounder() {
             />
 
             <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(to_top,rgba(35,38,39,.85)_0%,transparent_100%)] px-7 pb-6 pt-7">
-              <p className="m-0 text-lg font-bold text-white">Aditya Kumar Garge</p>
+              <p className="m-0 text-lg font-bold text-white">Aditya Kumar Garg</p>
 
               <p className="mt-1 text-xs font-semibold uppercase tracking-[0.18em] text-secondary">
                 Founder & Managing Director
@@ -51,13 +51,13 @@ export default function AboutFounder() {
           </p>
 
           <h3 className="mb-6 text-3xl font-extrabold leading-tight tracking-[-0.01em] text-primary md:text-5xl">
-            Aditya Kumar Garge
+            Aditya Kumar Garg
           </h3>
 
           <div className="mb-7 h-0.75 w-12 rounded bg-secondary" />
 
           <p className="mb-5 text-base font-medium leading-8 text-primary/65">
-            With 22+ years of leadership experience across sales, marketing,
+            With 25+ years of leadership experience across sales, marketing,
             FMCG channel sales and hospitality consulting, Aditya Kumaar Garg
             helps hospitality brands, hotel chains, developers and investors
             scale through strategic partnerships, commercial leasing and

@@ -4,7 +4,7 @@ export const FEATURED = {
   title: "How Management Contracts Are Reshaping India's Hospitality Landscape",
   excerpt:
     "As branded hotel inventory expands rapidly across tier-2 and tier-3 cities, management contracts are emerging as the preferred model for owners seeking operational expertise without capital risk.",
-  author: "Aditya Kumar Garge",
+  author: "Aditya Kumar Garg",
   date: "May 12, 2026",
   readTime: "7 min read",
   image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&q=80",
@@ -39,7 +39,7 @@ export const POSTS = [
     title: "The Rise of Grade-A Warehousing: What FMCG Companies Need From Logistics Parks",
     excerpt:
       "As supply chain resilience becomes a boardroom priority, FMCG companies are demanding higher specification warehouse spaces closer to urban consumption centres.",
-    author: "Aditya Kumar Garge",
+    author: "Aditya Kumar Garg",
     date: "April 18, 2026",
     readTime: "6 min read",
     image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",

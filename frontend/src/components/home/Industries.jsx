@@ -14,31 +14,35 @@ import {
 } from "lucide-react";
 
 const INDUSTRIES = [
-  {
-    icon: Stethoscope,
-    title: "Healthcare",
-    desc: "Specialized clinics, hospitals & wellness centers built for modern medicine.",
-    count: "120+ Projects",
-    color: "#ee7124",
-  },
-  {
-    icon: Building2,
-    title: "Corporate",
-    desc: "Premium office spaces & headquarters designed for productivity and prestige.",
-    count: "340+ Projects",
-    color: "#232627",
-  },
-  {
+   {
     icon: Hotel,
     title: "Hospitality",
     desc: "Luxury hotels, resorts & serviced apartments that redefine guest experience.",
     count: "85+ Projects",
     color: "#ee7124",
   },
+
+
+  {
+    icon: ShoppingBag,
+    title: "Retail",
+    desc: "High-footfall malls, showrooms & mixed-use commercial spaces.",
+    count: "175+ Projects",
+    color: "#232627",
+  },
+
+  {
+    icon: Building2,
+    title: "Corporate",
+    desc: "Premium office spaces, headquarters, and dynamic coliving, coworking hubs.",
+    count: "340+ Projects",
+    color: "#232627",
+  },
+  
   {
     icon: Factory,
     title: "Industrial",
-    desc: "Smart warehouses, manufacturing hubs & logistics parks for modern operations.",
+    desc: "Smart warehouses, warehouse space solution to FMCG , Pharma 3pla manufacturing hubs & logistics parks for modern operations.",
     count: "210+ Projects",
     color: "#232627",
   },
@@ -49,13 +53,7 @@ const INDUSTRIES = [
     count: "65+ Projects",
     color: "#ee7124",
   },
-  {
-    icon: ShoppingBag,
-    title: "Retail",
-    desc: "High-footfall malls, showrooms & mixed-use commercial spaces.",
-    count: "175+ Projects",
-    color: "#232627",
-  },
+  
 ];
 
 export default function Industries() {

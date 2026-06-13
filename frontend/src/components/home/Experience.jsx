@@ -37,9 +37,7 @@ export default function Experience() {
             <div className="space-y-6 text-base leading-relaxed text-primary/80 mb-10">
               <p className="text-lg font-medium text-primary">
                 Over the years, OneStates Hospitality has been associated with
-                hospitality collaborations and strategic transactions, including
-                projects with Espire Hospitality and Ananta Hotels and Resorts
-                for hotel and destination resort developments.
+                hospitality collaborations and strategic transactions.
               </p>
               <p className="text-primary/70 border-l-2 border-secondary pl-4 bg-secondary/1 py-2">
                 Our expertise combines hospitality consulting with strong

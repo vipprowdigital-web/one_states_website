@@ -97,9 +97,7 @@ export default function Hero() {
             custom={0.7}
             className="mt-7 text-primary text-base leading-relaxed max-w-md font-medium"
           >
-            Helping Hospitality Brands, Hotel Chains, Developers & Investors
-            Scale Through Strategic Collaborations, Brand Tie-Ups &
-            Growth-Focused Advisory Solutions.
+           Helping Hospitality Brands, Hotel Chains, Developers, Promoters, HNIs & Investors Scale Through Strategic Collaborations, Brand Tie-Ups & Growth-Focused Advisory Solutions.
           </motion.p>
 
           {/* Buttons */}

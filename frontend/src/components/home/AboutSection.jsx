@@ -73,7 +73,7 @@ export default function AboutSection() {
               className="text-primary/80 text-lg leading-relaxed mb-3 font-medium"
             >
               OneStates Hospitality is a strategic consulting and advisory firm
-              helping hospitality brands, hotel owners, developers and investors
+              helping hospitality brands, Promoters, HNIs, hotel owners, developers and investors
               identify the right opportunities for expansion and business
               growth.
             </motion.p>
@@ -85,10 +85,7 @@ export default function AboutSection() {
               transition={{ delay: 0.3 }}
               className="text-primary/60 text-base leading-relaxed mb-3 border-l-2 border-secondary/40 pl-6 italic bg-secondary/2 py-3 rounded-r-xl"
             >
-              With leadership experience across organizations like PepsiCo,
-              Marico, Himalaya and Hindustan Unilever, we bring a strong
-              understanding of business expansion, partnerships, negotiations
-              and market strategy.
+              Leveraging 17 years of corporate leadership across the  Real Estate sectors, we bring a profound understanding of business expansion, strategic partnerships, negotiations, and market strategy.
             </motion.p>
 
             <motion.p

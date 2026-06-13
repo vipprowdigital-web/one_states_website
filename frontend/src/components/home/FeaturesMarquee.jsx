@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 const MARQUEE_ITEMS = [
-  "22+ Years Leadership Experience",
+  "25+ Years Leadership Experience",
   "Hotel Brand Tie-Ups",
   "Commercial Leasing Solutions",
   "Asset Transactions Advisory",

@@ -60,7 +60,7 @@ export default function WhyUs() {
               {/* Deep gradient overlay to blend copy readability cleanly */}
               <div className="absolute inset-0 bg-linear-to-t from-primary via-primary/20 to-transparent mix-blend-multiply" />
 
-              {/* ─── 22+ YEARS LEADERSHIP FEATURE CARD ─── */}
+              {/* ─── 25+ YEARS LEADERSHIP FEATURE CARD ─── */}
               <div className="absolute bottom-0 left-0 right-0 sm:p-8 p-4 bg-linear-to-t from-primary via-primary/95 to-primary/80 backdrop-blur-md border-t border-white/10">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-secondary/10 rounded-xl text-secondary border border-secondary/20 shrink-0">
@@ -68,10 +68,10 @@ export default function WhyUs() {
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-2xl font-black text-white tracking-tight mb-2">
-                      22+ Years of Leadership Experience
+                      25+ Years of Leadership Experience
                     </h3>
                     <p className="text-white/60 text-sm leading-relaxed">
-                      With 22+ years of leadership experience across
+                      With 25+ years of leadership experience across
                       hospitality, FMCG and business expansion, we bring strong
                       expertise in strategic growth, partnerships and market
                       development.

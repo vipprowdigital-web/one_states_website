@@ -28,9 +28,8 @@ const services = [
   { name: "JV & Strategic Collaborations", href: "/services/jv-collaboration" },
 ];
 const industries = [
-  "Healthcare",
+    "Hospitality",
   "Corporate",
-  "Hospitality",
   "Industrial",
   "Education",
   "Retail",

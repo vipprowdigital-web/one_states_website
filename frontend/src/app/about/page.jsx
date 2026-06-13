@@ -162,7 +162,7 @@ export default function AboutPage() {
 //    Data
 // ───────────────────────────────────────── */
 // const stats = [
-//   { n: "22+",  l: "Years of Excellence" },
+//   { n: "25+",  l: "Years of Excellence" },
 //   { n: "500+", l: "Projects Delivered"  },
 //   { n: "98%",  l: "Client Satisfaction" },
 //   { n: "40+",  l: "Global Partners"     },
@@ -344,7 +344,7 @@ export default function AboutPage() {
 //                   padding: "28px 28px 24px",
 //                   background: "linear-gradient(to top,rgba(35,38,39,.85) 0%,transparent 100%)",
 //                 }}>
-//                   <p style={{ color: "#fff", fontWeight: 700, fontSize: "1.1rem", margin: 0 }}>Aditya Kumar Garge</p>
+//                   <p style={{ color: "#fff", fontWeight: 700, fontSize: "1.1rem", margin: 0 }}>Aditya Kumar Garg</p>
 //                   <p style={{ color: "var(--secondary)", fontSize: 12, letterSpacing: "0.18em", textTransform: "uppercase", marginTop: 4 }}>Founder & Managing Director</p>
 //                 </div>
 
@@ -359,7 +359,7 @@ export default function AboutPage() {
 //                 Founder's Message
 //               </p>
 //               <h3 style={{ fontSize: "clamp(1.8rem,3vw,2.4rem)", fontWeight: 800, lineHeight: 1.2, color: "var(--primary)", marginBottom: 24 }}>
-//                 Aditya Kumar Garge
+//                 Aditya Kumar Garg
 //               </h3>
 
 //               {/* divider */}

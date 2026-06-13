@@ -19,7 +19,7 @@ export default function AboutDesc() {
             We work closely with hospitality brands, hotel owners, developers,
             investors and commercial stakeholders to create scalable growth
             opportunities through strategic partnerships, market-focused
-            advisory and long-term business alignment. With over 22+ years of
+            advisory and long-term business alignment. With over 25+ years of
             leadership experience across hospitality, FMCG and large-scale
             business operations, OneStates Hospitality brings a strong
             understanding of expansion strategy, negotiations, relationship
