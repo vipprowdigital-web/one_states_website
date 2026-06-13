@@ -4,7 +4,7 @@ export const FEATURED = {
   title: "How Management Contracts Are Reshaping India's Hospitality Landscape",
   excerpt:
     "As branded hotel inventory expands rapidly across tier-2 and tier-3 cities, management contracts are emerging as the preferred model for owners seeking operational expertise without capital risk.",
-  author: "Aditya Kumar Garg",
+  author: "Aditya Kumaar Garg",
   date: "May 12, 2026",
   readTime: "7 min read",
   image: "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=1200&q=80",
